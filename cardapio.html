@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crock Cookies - Cardápio</title>
+    <link rel="shortcut icon" href="img/icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Ícone do Carrinho -->
+<div id="iconeCarrinho" onclick="mostrarCarrinho()">
+    🛒 <span id="contadorCarrinho">0</span>
+</div>
+
+<!-- Header -->
+<header>
+    <div class="header-container">
+        <img src="img/icon.png" alt="Logo Crock Cookies" class="logo">
+        <div class="header-texto">
+            <h1>Crock Cookies</h1>
+            <p>Deliciosos cookies e sobremesas feitas com amor!</p>
+        </div>
+    </div>
+</header>
+
+<!-- Menu Nav -->
+<nav class="menu-nav">
+    <a href="index.html">Home</a> 
+    <a href="cardapio.html" class="active">Cardápio</a>
+</nav>   
+
+<main>
+    <!-- Cookies -->
+    <section class="produtos">
+        <h1 class="secao-titulo">Cookies</h1>
+        <div class="cards-container">
+            <!-- 10 Cards de Cookies -->
+            <div class="card">
+                <img src="img/Cookies tradicional.jpeg" alt="Crock Cookies Clássico">
+                <h3>Cookies Clássico</h3>
+                <p>Cookie macio com gotas de chocolate</p>
+                <h3 class="preco">R$10,00</h3>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Cookie Clássico', 10, 'img/Cookies tradicional.jpeg')">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/Coockies_Black.jpeg" alt="Crock Cookies Black">
+                <h3>Cookies Black</h3>
+                <p>Cookies de cacau black 100%, com gotas de chocolate ao leite</p>
+                <h3 class="preco">R$10,00</h3>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Crock Cookies Nutella',10)">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/Cookies_dadinho.jpeg" alt="Crock Cookies Doce de Leite">
+                <h3>Cookies Dadinho</h3>
+                <p>Cookies massa fofa com chocolate shot picado e recheio de dadinho</p>
+                <h3 class="preco">R$12,00</h3>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Crock Cookies Doce de Leite',12)">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/Cookies_de_negresco.jpg" alt="Crock Cookies Brigadeiro">
+                <h3>Cookies Negresco</h3>
+                <p>Cookies massa fofa com gotas de chocolate ao leite com Negresco</p>
+                <h3 class="preco">R$13,00</h3>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Crock Cookies Brigadeiro',13)">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/cookies_de_charge.jpg" alt="Crock Cookies Chocolate">
+                <h3>Cookies Charge</h3>
+                <p>Cookie massa fofa com gotas de chocolate ao leite com recheio de charge</p>
+                <h3 class="preco">R$11,00</h3>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Crock Cookies Chocolate',11)">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/Cookie_amendoim.jpeg" alt="Crock Cookies Aveia">
+                <h3>Cookies Amendoim</h3>
+                <p>Cookies com massa fofa chocolate meio amargo, amendoim e recheio de doce de leite com amendoim</p>
+                <h3 class="preco">R$10,00</h3>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Crock Cookies Aveia',10)">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/crock_pistache.jpg" alt="Crock Cookies Pistache">
+                <h3>Crock Cookies Pistache</h3>
+                <p>Cookie crocante com pedaços de pistache</p>
+                <h3 class="preco">R$14,00</h3>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Crock Cookies Pistache',14)">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/crock_gourmet.jpg" alt="Crock Cookies Gourmet">
+                <h3>Crock Cookies Gourmet</h3>
+                <p>Cookie com chocolate belga e nozes</p>
+                <h3 class="preco">R$15,00</h3>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Crock Cookies Gourmet',15)">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/crock_caramelo.jpg" alt="Crock Cookies Caramelo">
+                <h3>Crock Cookies Caramelo</h3>
+                <p>Cookie recheado com caramelo salgado</p>
+                <h3 class="preco">R$13,00</h3>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Crock Cookies Caramelo',13)">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/crock_coco.jpg" alt="Crock Cookies Coco">
+                <h3>Crock Cookies Coco</h3>
+                <p>Cookie macio com coco ralado</p>
+                <h3 class="preco">R$11,00</h3>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Crock Cookies Coco',11)">Adicionar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobremesas -->
+    <section class="produtos">
+        <h2 class="secao-titulo">Sobremesas</h2>
+        <div class="cards-container">
+            <!-- 10 Cards de Sobremesas -->
+            <div class="card">
+                <img src="img/pudim.jpg" alt="Pudim Tradicional">
+                <h3>Pudim Tradicional</h3>
+                <p>Pudim cremoso de leite condensado</p>
+                <p class="preco">R$50,00</p>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Pudim Tradicional',50)">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/Bolo_de_limao.jpg" alt="Torta de Chocolate">
+                <h3>Bolo de limão</h3>
+                <p>Bolo de limão com cobertura de limão</p>
+                <p class="preco">R$40,00</p>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Torta de Chocolate',40)">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/Bolo_de_chocolate.jpg" alt="Mousse de Maracujá">
+                <h3>Bolo de cenoura fit</h3>
+                <p>Bolo de cenoura com cobertura de cacau 50%</p>
+                <p class="preco">R$60,00</p>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Mousse de Maracujá',60)">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/Bolo_de_cenoura.jpg" alt="Cheesecake">
+                <h3>Bolo de cenoura</h3>
+                <p>Bolo de cenoura com cobertura de cacau black e gotas de chocolate ao leite</p>
+                <p class="preco">R$60,00</p>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Cheesecake',60)">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/" alt="Pavê de Chocolate">
+                <h3>Pavê de Chocolate</h3>
+                <p>Pavê delicioso com creme e biscoito</p>
+                <p class="preco">R$16,00</p>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Pavê de Chocolate',16)">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/brownie.jpg" alt="Brownie">
+                <h3>Brownie</h3>
+                <p>Brownie macio com pedaços de chocolate</p>
+                <p class="preco">R$14,00</p>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Brownie',14)">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/sorvete.jpg" alt="Sorvete de Baunilha">
+                <h3>Sorvete de Baunilha</h3>
+                <p>Sorvete cremoso de baunilha</p>
+                <p class="preco">R$12,00</p>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Sorvete de Baunilha',12)">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/tiramisu.jpg" alt="Tiramisu">
+                <h3>Tiramisu</h3>
+                <p>Clássico tiramisu italiano</p>
+                <p class="preco">R$18,00</p>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Tiramisu',18)">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/pudim_caramelo.jpg" alt="Pudim de Caramelo">
+                <h3>Pudim de Caramelo</h3>
+                <p>Pudim com calda de caramelo</p>
+                <p class="preco">R$16,00</p>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Pudim de Caramelo',16)">Adicionar</button>
+            </div>
+            <div class="card">
+                <img src="img/mousse_chocolate.jpg" alt="Mousse de Chocolate">
+                <h3>Mousse de Chocolate</h3>
+                <p>Mousse cremoso de chocolate</p>
+                <p class="preco">R$15,00</p>
+                <button class="adicionar" onclick="adicionarAoCarrinho('Mousse de Chocolate',15)">Adicionar</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+   <footer id="contato">
+    <p>Contato: (19) 99248-0787 | WhatsApp</p>
+    <p>E-mail: Jessicacs.contato@gmail.com</p>
+    <a href="https://www.instagram.com/jessiicacunhas" target="_blank">Instagram</a>
+    <p>© 2025 Crock Cookies. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Modal Carrinho -->
+<div id="modalCarrinho" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fecharCarrinho()">&times;</span>
+        <h2>Seu Carrinho</h2>
+        <ul id="itensCarrinho"></ul>
+        <p id="totalCarrinho"></p>
+
+        <!-- Campo Nome apenas -->
+        <div style="margin-bottom:15px; text-align:left;">
+            <label for="nomeCliente"><strong>Nome:</strong></label><br>
+            <input type="text" id="nomeCliente" placeholder="Digite seu nome" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+        </div>
+
+        <button onclick="enviarParaWhatsApp()">Finalizar Pedido via WhatsApp</button>
+    </div>
+</div>
+
+<!-- ALERTA PERSONALIZADO -->
+<div id="alertaPersonalizado">
+    <span id="mensagemAlerta"></span>
+    <button onclick="fecharAlerta()">×</button>
+</div>
+
+<script src="script.js"></script>
+<div id="alertaPersonalizado">
+</div>
+</body>
+</html>
