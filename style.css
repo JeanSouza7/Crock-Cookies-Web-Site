@@ -200,3 +200,202 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     100% { opacity: 0; transform: translateY(-10px); }
 }
 
+.promocoes {
+    min-height: 100vh;
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff; /* fundo branco para consistência */
+    color: #5a2e1c;
+}
+
+.promocoes .secao-titulo {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #5a2e1c;
+}
+
+/* Grid de cards (igual ao cardapio) */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 0 20px 30px 20px;
+}
+
+/* Cards de promoções */
+.promo-card, .card {
+    background-color: #ffb6c1;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.2s;
+}
+
+.promo-card:hover, .card:hover {
+    transform: translateY(-5px);
+}
+
+.promo-card img, .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.promo-card h3, .card h3 {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #5a2e1c;
+}
+
+.promo-card p, .card p {
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #5a2e1c;
+}
+
+.promo-card .preco, .card .preco {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #6B2A0F;
+}
+
+.promo-card .adicionar, .card .adicionar {
+    padding: 10px 15px;
+    background-color: #6B2A0F;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s;
+}
+
+.promo-card .adicionar:hover, .card .adicionar:hover {
+    background-color: #2b150c;
+}
+#modalCarrinho input[type="text"] {
+    width: 90%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border: 2px solid #6B2A0F;
+    border-radius: 12px;
+    font-size: 1em;
+    outline: none;
+    transition: 0.3s;
+    background-color: #fff0f5;
+    color: #5a2e1c;
+}
+
+#modalCarrinho input[type="text"]:focus {
+    border-color: #ffb6c1;
+    box-shadow: 0 0 8px rgba(255, 182, 193, 0.5);
+}
+#enderecoEntrega {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+/* Opção de entrega / retirada */
+#modalCarrinho .opcao-entrega {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    width: 90%;
+}
+
+#modalCarrinho .opcao-entrega label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border: 2px solid #6B2A0F;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    background-color: #fff0f5;
+    color: #5a2e1c;
+    width: 100%;
+}
+
+#modalCarrinho .opcao-entrega input[type="radio"] {
+    accent-color: #5a2e1c; /* cor do círculo do radio */
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+#modalCarrinho .opcao-entrega label:hover {
+    border-color: #ffb6c1;
+    box-shadow: 0 0 8px rgba(255, 182, 193, 0.5);
+}
+.opcao-entrega {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.opcao-entrega label {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espaço entre radio e texto */
+    padding: 10px 15px;
+    border: 2px solid #6B2A0F;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #fff0f5;
+    color: #5a2e1c;
+    transition: 0.3s;
+    justify-content: flex-start; /* Alinha tudo à esquerda */
+}
+
+.texto-entrega {
+    margin-left: 10px; /* espaço do radio até o texto */
+    font-weight: normal;
+    font-size: 0.95em;
+    color: #6B2A0F;
+}
+
+.opcao-entrega label:hover {
+    border-color: #ffb6c1;
+    box-shadow: 0 0 8px rgba(255, 182, 193, 0.5);
+}
+
+.opcao-entrega input[type="radio"] {
+    accent-color: #ffb6c1;
+    transform: scale(1.3);
+}
+
+.endereco-retirada {
+    font-weight: normal;
+    font-size: 0.9em;
+    color: #6B2A0F;
+}
+
+/* Inputs de endereço */
+.input-endereco {
+    padding: 10px 12px;
+    border: 2px solid #6B2A0F;
+    border-radius: 10px;
+    font-size: 1em;
+    width: 100%;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.input-endereco:focus {
+    border-color: #ffb6c1;
+    box-shadow: 0 0 5px rgba(255,182,193,0.5);
+}

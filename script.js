@@ -1,86 +1,80 @@
-let carrinho = [];
+// Recupera carrinho do localStorage ou cria vazio
+let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
 // Atualiza contador de itens no carrinho
 function atualizarContador() {
     document.getElementById("contadorCarrinho").textContent = carrinho.length;
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
 }
 
-// Mostra alerta personalizado (aparece e some sozinho)
+// Alerta personalizado
 function mostrarAlerta(mensagem) {
     const alerta = document.getElementById("alertaPersonalizado");
     alerta.textContent = mensagem;
     alerta.style.display = "block";
-
-    setTimeout(() => {
-        alerta.style.display = "none";
-    }, 3000); // some em 3 segundos
+    setTimeout(() => { alerta.style.display = "none"; }, 3000);
 }
 
-// Adiciona item ao carrinho
+// Adicionar item
 function adicionarAoCarrinho(nome, preco, imagem) {
     const itemExistente = carrinho.find(item => item.nome === nome);
-    if (itemExistente) {
-        itemExistente.qtd += 1;
-    } else {
-        carrinho.push({ nome, preco, qtd: 1, imagem });
-    }
+    if (itemExistente) itemExistente.qtd += 1;
+    else carrinho.push({ nome, preco, qtd: 1, imagem });
 
     atualizarContador();
     pulsarIcone();
     mostrarAlerta(`${nome} adicionado ao carrinho!`);
 }
 
-// Anima o ícone do carrinho
+// Anima ícone
 function pulsarIcone() {
     const icone = document.getElementById("iconeCarrinho");
     icone.classList.add("pulsando");
     setTimeout(() => { icone.classList.remove("pulsando"); }, 400);
 }
 
-// Exibe o carrinho no modal
+// Mostrar carrinho no modal
 function mostrarCarrinho() {
-    if (carrinho.length === 0) {
-        mostrarAlerta("O carrinho está vazio!");
-        return;
-    }
-
-    document.getElementById("iconeCarrinho").classList.add("modal-aberto");
-
     const modal = document.getElementById("modalCarrinho");
     const lista = document.getElementById("itensCarrinho");
     const totalElem = document.getElementById("totalCarrinho");
+
+    if (carrinho.length === 0) {
+        mostrarAlerta("O carrinho está vazio!");
+        modal.classList.remove("show");
+        return;
+    }
 
     lista.innerHTML = "";
     let total = 0;
 
     carrinho.forEach((item, index) => {
-        let li = document.createElement("li");
+        const li = document.createElement("li");
 
-        let img = document.createElement("img");
+        const img = document.createElement("img");
         img.src = item.imagem;
         img.alt = item.nome;
         img.style.width = "60px";
         img.style.height = "60px";
         img.style.objectFit = "cover";
         img.style.borderRadius = "8px";
-        img.style.marginRight = "10px";
 
-        let span = document.createElement("span");
+        const span = document.createElement("span");
         span.textContent = `${item.nome} - R$${item.preco},00`;
 
-        let qtdContainer = document.createElement("div");
+        const qtdContainer = document.createElement("div");
 
-        let btnMenos = document.createElement("button");
+        const btnMenos = document.createElement("button");
         btnMenos.textContent = "-";
-        btnMenos.onclick = function () { alterarQuantidade(index, -1); };
+        btnMenos.onclick = () => alterarQuantidade(index, -1);
 
-        let qtdSpan = document.createElement("span");
+        const qtdSpan = document.createElement("span");
         qtdSpan.textContent = item.qtd;
         qtdSpan.style.margin = "0 8px";
 
-        let btnMais = document.createElement("button");
+        const btnMais = document.createElement("button");
         btnMais.textContent = "+";
-        btnMais.onclick = function () { alterarQuantidade(index, 1); };
+        btnMais.onclick = () => alterarQuantidade(index, 1);
 
         qtdContainer.appendChild(btnMenos);
         qtdContainer.appendChild(qtdSpan);
@@ -88,9 +82,9 @@ function mostrarCarrinho() {
         qtdContainer.style.display = "flex";
         qtdContainer.style.alignItems = "center";
 
-        let btnRemover = document.createElement("button");
+        const btnRemover = document.createElement("button");
         btnRemover.textContent = "Remover";
-        btnRemover.onclick = function () { removerItem(index); };
+        btnRemover.onclick = () => removerItem(index);
 
         li.appendChild(img);
         li.appendChild(span);
@@ -101,38 +95,43 @@ function mostrarCarrinho() {
         total += item.preco * item.qtd;
     });
 
-    totalElem.textContent = `Total: R$${total},00`;
+    // Info entrega
+    const entrega = document.querySelector('input[name="entrega"]:checked').value;
+    let infoEntrega = entrega === "retirar" ? "Retirar no local" : "Entrega (a calcular)";
+
+    totalElem.textContent = `Total: R$${total},00 (${infoEntrega})`;
+
     modal.classList.add("show");
 }
 
-// Altera quantidade no carrinho
+// Alterar quantidade
 function alterarQuantidade(index, delta) {
     carrinho[index].qtd += delta;
-    if (carrinho[index].qtd <= 0) { carrinho.splice(index, 1); }
-    mostrarCarrinho();
+    if (carrinho[index].qtd <= 0) carrinho.splice(index, 1);
     atualizarContador();
+    mostrarCarrinho();
 }
 
-// Remove item do carrinho
+// Remover item
 function removerItem(index) {
     carrinho.splice(index, 1);
-    mostrarCarrinho();
     atualizarContador();
+    mostrarCarrinho();
 }
 
-// Fecha o carrinho
+// Fechar modal
 function fecharCarrinho() {
     document.getElementById("modalCarrinho").classList.remove("show");
     document.getElementById("iconeCarrinho").classList.remove("modal-aberto");
 }
 
-// Fecha modal clicando fora
-window.onclick = function (event) {
+// Clique fora do modal
+window.onclick = function(event) {
     const modal = document.getElementById("modalCarrinho");
-    if (event.target == modal) { fecharCarrinho(); }
-}
+    if (event.target == modal) fecharCarrinho();
+};
 
-// Envia pedido para o WhatsApp
+// Enviar pedido para WhatsApp
 function enviarParaWhatsApp() {
     if (carrinho.length === 0) {
         mostrarAlerta("O carrinho está vazio!");
@@ -140,22 +139,49 @@ function enviarParaWhatsApp() {
     }
 
     const nomeCliente = document.getElementById("nomeCliente").value.trim();
-
     if (!nomeCliente) {
-        mostrarAlerta("Por favor, preencha seu nome para finalizar o pedido.");
+        mostrarAlerta("Preencha seu nome!");
         return;
     }
 
-    let mensagem = `Olá! Meu nome é ${nomeCliente}.\n\nGostaria de fazer o pedido:\n`;
+    let mensagem = `Olá! Meu nome é ${nomeCliente}.\n\nPedido:\n`;
     let total = 0;
+
     carrinho.forEach(item => {
         mensagem += `- ${item.nome} x${item.qtd}: R$${item.preco * item.qtd},00\n`;
         total += item.preco * item.qtd;
     });
-    mensagem += `Total: R$${total},00`;
 
-    let link = `https://wa.me/5519989283180?text=${encodeURIComponent(mensagem)}`;
+    const entrega = document.querySelector('input[name="entrega"]:checked').value;
+    mensagem += entrega === "retirar" ? `\nRetirar no local(endereco)` : `\nEntrega (a calcular)`;
+
+    mensagem += `\nTotal: R$${total},00`;
+
+    const link = `https://wa.me/5519989283180?text=${encodeURIComponent(mensagem)}`;
     window.open(link, "_blank");
 }
 
-window.onload = function () { atualizarContador(); }
+// Inicialização
+window.onload = () => {
+    atualizarContador();
+
+    // Mostrar/esconder campos de endereço
+    document.querySelectorAll('input[name="entrega"]').forEach(radio => {
+        radio.addEventListener("change", () => {
+            const enderecoDiv = document.getElementById("enderecoEntrega");
+            enderecoDiv.style.display = document.querySelector('input[name="entrega"]:checked').value === "entrega" ? "flex" : "none";
+            mostrarCarrinho();
+        });
+    });
+
+    // Conectar botões de adicionar
+    document.querySelectorAll(".adicionar").forEach(botao => {
+        botao.addEventListener("click", () => {
+            const nome = botao.dataset.nome;
+            const preco = parseFloat(botao.dataset.preco);
+            const imagem = botao.dataset.img;
+            adicionarAoCarrinho(nome, preco, imagem);
+        });
+    });
+};
+

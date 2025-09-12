@@ -9,9 +9,50 @@
 </head>
 <body>
 
+<!-- Alerta Personalizado -->
+<div id="alertaPersonalizado"></div>
+
 <!-- Ícone do Carrinho -->
 <div id="iconeCarrinho" onclick="mostrarCarrinho()">
     🛒 <span id="contadorCarrinho">0</span>
+</div>
+
+<!-- Modal do Carrinho -->
+<div id="modalCarrinho" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fecharCarrinho()">&times;</span>
+        <h2>Seu Carrinho</h2>
+        <ul id="itensCarrinho"></ul>
+
+        <!-- Opção Retirar ou Entrega -->
+<div class="opcao-entrega">
+    <label>
+        <input type="radio" name="entrega" value="retirar" checked onclick="atualizarTotal()">
+        Retirar no local
+        <span class="endereco-retirada">(Endereco)</span>
+    </label>
+    <label>
+        <input type="radio" name="entrega" value="entrega" onclick="atualizarTotal()">
+        Entrega (a calcular)
+    </label>
+</div>
+
+        <!-- Campos de endereço (aparecem só se entrega) -->
+        <div id="enderecoEntrega" style="display:none; flex-direction: column; gap: 5px; text-align:left; margin-bottom:10px;">
+            <input type="text" id="rua" placeholder="Rua">
+            <input type="text" id="bairro" placeholder="Bairro">
+            <input type="text" id="numero" placeholder="Número">
+        </div>
+
+        <!-- Total -->
+        <p id="totalCarrinho">Total: R$0,00</p>
+
+        <!-- Nome do Cliente -->
+        <input type="text" id="nomeCliente" placeholder="Digite seu nome">
+
+        <!-- Botão Finalizar Pedido -->
+        <button onclick="enviarParaWhatsApp()">Finalizar Pedido</button>
+    </div>
 </div>
 
 <!-- Header -->
@@ -27,85 +68,86 @@
 
 <!-- Menu Nav -->
 <nav class="menu-nav">
-    <a href="index.html">Home</a> 
+    <a href="index.html">Home</a>
     <a href="cardapio.html" class="active">Cardápio</a>
-</nav>   
+    <a href="promocoes.html">Promoções</a>
+</nav>         
 
 <main>
     <!-- Cookies -->
-    <section class="produtos">
+        <section class="produtos">
         <h1 class="secao-titulo">Cookies</h1>
         <div class="cards-container">
-            <!-- 10 Cards de Cookies -->
+            <!-- Exemplo de cards, continue adicionando os demais -->
             <div class="card">
                 <img src="img/Cookies tradicional.jpeg" alt="Cookies Clássico">
                 <h3>Cookies Clássico</h3>
                 <p>Cookie macio com gotas de chocolate</p>
                 <h3 class="preco">R$10,00</h3>
-                <button class="adicionar" onclick="adicionarAoCarrinho('Cookie Clássico', 10, 'img/Cookies tradicional.jpeg')">Adicionar</button>
+                <button class="adicionar" data-nome="Cookie Clássico" data-preco="10" data-img="img/Cookies tradicional.jpeg">Adicionar</button>
             </div>
             <div class="card">
                 <img src="img/Coockies_Black.jpeg" alt="Crock Cookies Black">
                 <h3>Cookies Black</h3>
                 <p>Cookies de cacau black 100%, com gotas de chocolate ao leite</p>
                 <h3 class="preco">R$10,00</h3>
-                <button class="adicionar" onclick="adicionarAoCarrinho('Cookie Black',10,'img/Coockies_Black.jpeg')">Adicionar</button>
+                <button class="adicionar" data-nome="Cookie Black" data-preco="10" data-img="img/Coockies_Black.jpeg">Adicionar</button>
             </div>
             <div class="card">
                 <img src="img/Cookies_dadinho.jpeg" alt="Cookie dadinho">
                 <h3>Cookies Dadinho</h3>
                 <p>Cookies massa fofa com chocolate shot picado e recheio de dadinho</p>
                 <h3 class="preco">R$12,00</h3>
-                <button class="adicionar" onclick="adicionarAoCarrinho('Cookie Dadinho',12,'img/Cookies_dadinho.jpeg')">Adicionar</button>
+                <button class="adicionar" data-nome="Cookies Dadinho" data-preco="12" data-img="img/Cookies_dadinho.jpeg">Adicionar</button>
             </div>
             <div class="card">
                 <img src="img/Cookies_de_negresco.jpg" alt="Cookies Negresco">
                 <h3>Cookies Negresco</h3>
                 <p>Cookies massa fofa com gotas de chocolate ao leite com Negresco</p>
                 <h3 class="preco">R$13,00</h3>
-                <button class="adicionar" onclick="adicionarAoCarrinho('Cookies Negresco',13,'img/Cookies_de_negresco.jpg')">Adicionar</button>
+                <button class="adicionar" data-nome="Cookies Negresco" data-preco="13" data-img="img/Cookies_de_negresco.jpg">Adicionar</button>
             </div>
             <div class="card">
                 <img src="img/cookies_de_charge.jpg" alt="Cookies Charge">
                 <h3>Cookies Charge</h3>
                 <p>Cookie massa fofa com gotas de chocolate ao leite com recheio de charge</p>
                 <h3 class="preco">R$11,00</h3>
-                <button class="adicionar" onclick="adicionarAoCarrinho('Cookies Charge',11,'img/cookies_de_charge.jpg')">Adicionar</button>
+                <button class="adicionar" data-nome="Cookies Charge" data-preco="11" data-img="img/cookies_de_charge.jpg">Adicionar</button>
             </div>
             <div class="card">
                 <img src="img/Cookie_amendoim.jpeg" alt="Cookies Amendoim">
                 <h3>Cookies Amendoim</h3>
                 <p>Cookies com massa fofa chocolate meio amargo, amendoim e recheio de doce de leite com amendoim</p>
-                <h3 class="preco">R$10,00</h3>
-                <button class="adicionar" onclick="adicionarAoCarrinho('Cookies Amendoim',10,'img/Cookie_amendoim.jpeg')">Adicionar</button>
+                <h3 class="preco">R$12,00</h3>
+                <button class="adicionar" data-nome="Cookies Amendoim" data-preco="12" data-img="img/Cookie_amendoim.jpeg">Adicionar</button>
             </div>
             <div class="card">
                 <img src="img/crock_pistache.jpg" alt="Crock Cookies Pistache">
-                <h3>Crock Cookies Pistache</h3>
+                <h3>Cookies Pistache</h3>
                 <p>Cookie crocante com pedaços de pistache</p>
                 <h3 class="preco">R$14,00</h3>
-                <button class="adicionar" onclick="adicionarAoCarrinho('Crock Cookies Pistache',14)">Adicionar</button>
+                <button class="adicionar" data-nome="Cookies Pistache" data-preco="14" data-img="img/crock_pistache.jpg">Adicionar</button>
             </div>
             <div class="card">
                 <img src="img/crock_gourmet.jpg" alt="Crock Cookies Gourmet">
-                <h3>Crock Cookies Gourmet</h3>
+                <h3>Cookies Gourmet</h3>
                 <p>Cookie com chocolate belga e nozes</p>
                 <h3 class="preco">R$15,00</h3>
-                <button class="adicionar" onclick="adicionarAoCarrinho('Crock Cookies Gourmet',15)">Adicionar</button>
+                <button class="adicionar" data-nome="Cookies Gourmet" data-preco="15" data-img="img/crock_gourmet.jpg">Adicionar</button>
             </div>
             <div class="card">
                 <img src="img/crock_caramelo.jpg" alt="Crock Cookies Caramelo">
-                <h3>Crock Cookies Caramelo</h3>
+                <h3>Cookies Caramelo</h3>
                 <p>Cookie recheado com caramelo salgado</p>
                 <h3 class="preco">R$13,00</h3>
-                <button class="adicionar" onclick="adicionarAoCarrinho('Crock Cookies Caramelo',13)">Adicionar</button>
+                <button class="adicionar" data-nome="Cookies Caramelo" data-preco="13" data-img="img/crock_caramelo.jpg">Adicionar</button>
             </div>
             <div class="card">
                 <img src="img/crock_coco.jpg" alt="Crock Cookies Coco">
-                <h3>Crock Cookies Coco</h3>
+                <h3>Cookies Coco</h3>
                 <p>Cookie macio com coco ralado</p>
                 <h3 class="preco">R$11,00</h3>
-                <button class="adicionar" onclick="adicionarAoCarrinho('Crock Cookies Coco',11)">Adicionar</button>
+                <button class="adicionar" data-nome="Cookies Coco" data-preco="11" data-img="img/crock_coco.jpg">Adicionar</button>
             </div>
         </div>
     </section>
@@ -189,39 +231,39 @@
     </section>
 </main>
 
-   <footer id="contato">
+ <footer id="contato">
     <p>Contato: (19) 98928-3180 | WhatsApp</p>
     <p>E-mail: Jessicacs.contato@gmail.com</p>
     <a href="https://www.instagram.com/jessiicacunhas" target="_blank">Instagram</a>
     <p>© 2025 Crock Cookies. Todos os direitos reservados.</p>
 </footer>
 
-<!-- Modal Carrinho -->
-<div id="modalCarrinho" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="fecharCarrinho()">&times;</span>
-        <h2>Seu Carrinho</h2>
-        <ul id="itensCarrinho"></ul>
-        <p id="totalCarrinho"></p>
-
-        <!-- Campo Nome apenas -->
-        <div style="margin-bottom:15px; text-align:left;">
-            <label for="nomeCliente"><strong>Nome:</strong></label><br>
-            <input type="text" id="nomeCliente" placeholder="Digite seu nome" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-        </div>
-
-        <button onclick="enviarParaWhatsApp()">Finalizar Pedido via WhatsApp</button>
-    </div>
-</div>
-
-<!-- ALERTA PERSONALIZADO -->
-<div id="alertaPersonalizado">
-    <span id="mensagemAlerta"></span>
-    <button onclick="fecharAlerta()">×</button>
-</div>
-
+<!-- Script do Carrinho -->
 <script src="script.js"></script>
-<div id="alertaPersonalizado">
-</div>
+<script>
+window.onload = () => {
+    atualizarContador();
+
+    // Mostrar/esconder campos de endereço
+    document.querySelectorAll('input[name="entrega"]').forEach(radio => {
+        radio.addEventListener("change", () => {
+            const enderecoDiv = document.getElementById("enderecoEntrega");
+            enderecoDiv.style.display = document.querySelector('input[name="entrega"]:checked').value === "entrega" ? "flex" : "none";
+            mostrarCarrinho();
+        });
+    });
+
+    // Conectar botões de adicionar
+    document.querySelectorAll(".adicionar").forEach(botao => {
+        botao.addEventListener("click", () => {
+            const nome = botao.dataset.nome;
+            const preco = parseFloat(botao.dataset.preco);
+            const imagem = botao.dataset.img;
+            adicionarAoCarrinho(nome, preco, imagem);
+        });
+    });
+};
+</script>
+
 </body>
 </html>

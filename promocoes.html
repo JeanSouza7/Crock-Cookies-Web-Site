@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crock Cookies - Promoções</title>
+  <link rel="shortcut icon" href="img/icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <!-- Alerta Personalizado -->
+<div id="alertaPersonalizado"></div>
+
+<!-- Ícone do Carrinho -->
+<div id="iconeCarrinho" onclick="mostrarCarrinho()">
+    🛒 <span id="contadorCarrinho">0</span>
+</div>
+
+<!-- Modal do Carrinho -->
+<div id="modalCarrinho" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fecharCarrinho()">&times;</span>
+        <h2>Seu Carrinho</h2>
+        <ul id="itensCarrinho"></ul>
+
+        <!-- Opção Retirar ou Entrega -->
+<div class="opcao-entrega">
+    <label>
+        <input type="radio" name="entrega" value="retirar" checked onclick="atualizarTotal()">
+        Retirar no local
+        <span class="endereco-retirada">(Endereco)</span>
+    </label>
+    <label>
+        <input type="radio" name="entrega" value="entrega" onclick="atualizarTotal()">
+        Entrega (a calcular)
+    </label>
+</div>
+
+        <!-- Campos de endereço (aparecem só se entrega) -->
+        <div id="enderecoEntrega" style="display:none; flex-direction: column; gap: 5px; text-align:left; margin-bottom:10px;">
+            <input type="text" id="rua" placeholder="Rua">
+            <input type="text" id="bairro" placeholder="Bairro">
+            <input type="text" id="numero" placeholder="Número">
+        </div>
+
+        <!-- Total -->
+        <p id="totalCarrinho">Total: R$0,00</p>
+
+        <!-- Nome do Cliente -->
+        <input type="text" id="nomeCliente" placeholder="Digite seu nome">
+
+        <!-- Botão Finalizar Pedido -->
+        <button onclick="enviarParaWhatsApp()">Finalizar Pedido</button>
+    </div>
+</div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <img src="img/icon.png" alt="Logo Crock Cookies" class="logo">
+      <div class="header-texto">
+        <h1>Crock Cookies</h1>
+        <p>Deliciosos cookies e sobremesas feitas com amor!</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navegação -->
+  <nav class="menu-nav">
+    <a href="index.html">Home</a>
+    <a href="cardapio.html">Cardápio</a>
+    <a href="promocoes.html" class="active">Promoções</a>
+  </nav>
+
+  <!-- Seção Promoções -->
+  <main class="main-promocoes">
+    <section class="promocoes">
+      <h2 class="secao-titulo">Promoções Especiais</h2>
+      <div class="cards-container">
+
+        <!-- Promoção 1 -->
+        <div class="card">
+          <img src="img/promo1.jpg" alt="Combo Cookies">
+          <h3>Combo Cookies</h3>
+          <p>3 Cookies por apenas R$25,00!</p>
+          <span class="preco">R$ 25,00</span><br>
+          <button class="adicionar"
+            data-nome="Combo Cookies"
+            data-preco="25"
+            data-img="img/promo1.jpg">
+            Adicionar
+          </button>
+        </div>
+
+        <!-- Promoção 2 -->
+        <div class="card">
+          <img src="img/promo2.jpg" alt="Brownie + Cookie">
+          <h3>Brownie + Cookie</h3>
+          <p>Leve os dois por só R$12,00!</p>
+          <span class="preco">R$ 12,00</span><br>
+          <button class="adicionar"
+            data-nome="Brownie + Cookie"
+            data-preco="12"
+            data-img="img/promo2.jpg">
+            Adicionar
+          </button>
+        </div>
+
+        <!-- Promoção 3 -->
+        <div class="card">
+          <img src="img/promo3.jpg" alt="Cookie de Nutella + Trufa">
+          <h3>Cookie Nutella + Trufa</h3>
+          <p>Só R$15,00 no combo!</p>
+          <span class="preco">R$ 15,00</span><br>
+          <button class="adicionar"
+            data-nome="Cookie Nutella + Trufa"
+            data-preco="15"
+            data-img="img/promo3.jpg">
+            Adicionar
+          </button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contato">
+    <p>Contato: (19) 99248-0787 | WhatsApp</p>
+    <p>E-mail: Jessicacs.contato@gmail.com</p>
+    <a href="https://www.instagram.com/jessiicacunhas" target="_blank">Instagram</a>
+    <p>© 2025 Crock Cookies. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Modal do Carrinho -->
+  <div id="modalCarrinho" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharCarrinho()">&times;</span>
+      <h2>Seu Carrinho</h2>
+
+      <!-- Lista de itens -->
+      <ul id="itensCarrinho"></ul>
+
+      <!-- Opção Retirar ou Entrega -->
+      <div style="margin-bottom:15px; text-align:left;">
+        <label>
+          <input type="radio" name="entrega" value="retirar" checked onclick="atualizarTotal()">
+          Retirar no local
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="entrega" value="entrega" onclick="atualizarTotal()">
+          Entrega (R$5,00)
+        </label>
+      </div>
+
+      <!-- Campos de endereço (aparecem só se entrega) -->
+      <div id="enderecoEntrega" style="display:none; text-align:left;">
+        <input type="text" id="rua" placeholder="Rua">
+        <input type="text" id="bairro" placeholder="Bairro">
+        <input type="text" id="numero" placeholder="Número">
+      </div>
+
+      <!-- Total -->
+      <p id="totalCarrinho">Total: R$0,00</p>
+
+      <!-- Nome do Cliente -->
+      <input type="text" id="nomeCliente" placeholder="Digite seu nome">
+
+      <!-- Botão Finalizar Pedido -->
+      <button onclick="enviarParaWhatsApp()">Finalizar Pedido</button>
+    </div>
+  </div>
+
+  <!-- Script do Carrinho -->
+  <script src="script.js"></script>
+  <script>
+    // Conectar botões "Adicionar" ao carrinho
+    document.querySelectorAll(".adicionar").forEach(botao => {
+      botao.addEventListener("click", () => {
+        const nome = botao.dataset.nome;
+        const preco = parseFloat(botao.dataset.preco);
+        const imagem = botao.dataset.img;
+        adicionarAoCarrinho(nome, preco, imagem);
+      });
+    });
+  </script>
+</body>
+</html>
+s
