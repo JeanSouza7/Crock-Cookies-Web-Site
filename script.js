@@ -154,7 +154,7 @@ function enviarParaWhatsApp() {
     });
     mensagem += `Total: R$${total},00`;
 
-    let link = `https://wa.me/5519992480787?text=${encodeURIComponent(mensagem)}`;
+    let link = `https://wa.me/5519989283180?text=${encodeURIComponent(mensagem)}`;
     window.open(link, "_blank");
 }
 
