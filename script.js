@@ -163,7 +163,7 @@ function enviarParaWhatsApp() {
 
 // Inicialização
 window.onload = () => {
-    atualizarContador();
+    atualizarContador();''
 
     // Mostrar/esconder campos de endereço
     document.querySelectorAll('input[name="entrega"]').forEach(radio => {

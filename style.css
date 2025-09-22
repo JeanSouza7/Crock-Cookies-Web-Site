@@ -338,6 +338,26 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     border-color: #ffb6c1;
     box-shadow: 0 0 8px rgba(255, 182, 193, 0.5);
 }
+
+/* Barra de rolagem no carrinho ajustável */
+#modalCarrinho ul {
+    max-height: 50vh;   /* ocupa até metade da tela */
+    overflow-y: auto;   /* ativa a rolagem se passar do limite */
+    padding-right: 5px; /* espaço pra barra de rolagem */
+}
+
+/* Estilizando a barra de rolagem (opcional) */
+#modalCarrinho ul::-webkit-scrollbar {
+    width: 8px;
+}
+#modalCarrinho ul::-webkit-scrollbar-thumb {
+    background-color: #6B2A0F;
+    border-radius: 10px;
+}
+#modalCarrinho ul::-webkit-scrollbar-track {
+    background: #ffe4ec;
+    border-radius: 10px;
+}
 .opcao-entrega {
     display: flex;
     flex-direction: column;
@@ -398,4 +418,93 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
 .input-endereco:focus {
     border-color: #ffb6c1;
     box-shadow: 0 0 5px rgba(255,182,193,0.5);
+}
+/* ===== RESPONSIVIDADE ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .header-container .logo {
+        width: 150px;
+        height: auto;
+    }
+    .header-texto h1 {
+        font-size: 3.5em;
+    }
+    .header-texto p {
+        font-size: 1.4em;
+    }
+    .card img {
+        height: 180px;
+    }
+    .secao-titulo {
+        font-size: 2.5em;
+    }
+    .modal-content {
+        width: 70%;
+    }
+}
+
+/* Celulares médios */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .header-container .logo {
+        width: 120px;
+    }
+    .header-texto h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+    .header-texto p {
+        font-size: 1.1em;
+        text-align: center;
+    }
+    .cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+    .card img {
+        height: 140px;
+    }
+    .secao-titulo {
+        font-size: 2em;
+    }
+    .modal-content {
+        width: 90%;
+        max-width: none;
+        padding: 40px 15px 20px;
+    }
+    #modalCarrinho ul {
+        max-height: 60vh;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    .header-texto h1 {
+        font-size: 2em;
+    }
+    .header-texto p {
+        font-size: 1em;
+    }
+    .card img {
+        height: 120px;
+    }
+    .card h3 {
+        font-size: 1em;
+    }
+    .card p {
+        font-size: 0.9em;
+    }
+    .secao-titulo {
+        font-size: 1.6em;
+    }
+    .modal-content {
+        width: 95%;
+        padding: 30px 10px 15px;
+    }
+    #modalCarrinho ul {
+        max-height: 65vh;
+    }
 }
