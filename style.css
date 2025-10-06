@@ -19,8 +19,8 @@ header {
 
 .header-container .logo { width: 200px; height: 150px; object-fit: contain; }
 
-.header-texto h1 { font-size: 5.5em; margin-bottom: 1px; }
-.header-texto p { font-size: 1.8em; margin-top: 0; }
+.header-texto h1 { font-size: clamp(2em, 6vw, 5.5em); margin-bottom: 1px; }
+.header-texto p { font-size: clamp(1em, 3vw, 1.8em); margin-top: 0; }
 
 /* Navegação fora do header */
 .menu-nav {
@@ -87,6 +87,9 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
 .modal { display: none; position: fixed; z-index: 200; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); }
 .modal.show { display: block; }
 .modal-content {
+    width: clamp(300px, 80vw, 350px);
+    max-width: 95%;
+
     background-color: #fff0f5;
     position: fixed;
     top: 0;
@@ -100,7 +103,10 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     text-align: center;
     transition: right 0.4s ease;
 }
-.modal.show .modal-content { right: 0; }
+.modal.show .modal-content {
+    width: clamp(300px, 80vw, 350px);
+    max-width: 95%;
+ right: 0; }
 .modal-content h2 { margin-bottom: 20px; color: #6B2A0F; font-size: 1.8em; }
 .modal-content ul { list-style: none; padding: 0; margin-bottom: 20px; }
 .modal-content li { background-color: #ffe4ec; border-radius: 30px; margin-bottom: 12px; padding: 10px 15px; display: flex; align-items: center; justify-content: space-between; font-size: 1em; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
@@ -169,13 +175,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
 }
 
 /* Seção título */
-.secao-titulo {
-    text-align: center;
-    font-size: 50px;
-    font-weight: bold;
-    margin: 5px 0;
-    color: #5a2e1c;
-}
+.secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #5a2e1c; }
 
 /* Alerta personalizado */
 #alertaPersonalizado {
@@ -208,12 +208,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     color: #5a2e1c;
 }
 
-.promocoes .secao-titulo {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #5a2e1c;
-}
+.promocoes .secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #5a2e1c; }
 
 /* Grid de cards (igual ao cardapio) */
 .cards-container {
@@ -341,9 +336,28 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
 
 /* Barra de rolagem no carrinho ajustável */
 #modalCarrinho ul {
-    max-height: 50vh;   /* ocupa até metade da tela */
-    overflow-y: auto;   /* ativa a rolagem se passar do limite */
-    padding-right: 5px; /* espaço pra barra de rolagem */
+    max-height: none;
+    overflow: visible;
+}
+
+.modal-content {
+    background-color: #fff0f5;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 350px;
+    max-width: 80%;
+    padding: 60px 20px 25px 20px;
+    border-radius: 20px 0 0 20px;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: right 0.4s ease;
+
+    /* 🔹 Adicione estas linhas */
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #6B2A0F #ffe4ec;
 }
 
 /* Estilizando a barra de rolagem (opcional) */
@@ -427,19 +441,16 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
         width: 150px;
         height: auto;
     }
-    .header-texto h1 {
-        font-size: 3.5em;
-    }
-    .header-texto p {
-        font-size: 1.4em;
-    }
+    .header-texto h1 { font-size: clamp(2em, 6vw, 5.5em); margin-bottom: 1px; }
+    .header-texto p { font-size: clamp(1em, 3vw, 1.8em); margin-top: 0; }
     .card img {
         height: 180px;
     }
-    .secao-titulo {
-        font-size: 2.5em;
-    }
+    .secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #5a2e1c; }
     .modal-content {
+    width: clamp(300px, 80vw, 350px);
+    max-width: 95%;
+
         width: 70%;
     }
 }
@@ -453,24 +464,19 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     .header-container .logo {
         width: 120px;
     }
-    .header-texto h1 {
-        font-size: 2.5em;
-        text-align: center;
-    }
-    .header-texto p {
-        font-size: 1.1em;
-        text-align: center;
-    }
+    .header-texto h1 { font-size: clamp(2em, 6vw, 5.5em); margin-bottom: 1px; }
+    .header-texto p { font-size: clamp(1em, 3vw, 1.8em); margin-top: 0; }
     .cards-container {
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     }
     .card img {
         height: 140px;
     }
-    .secao-titulo {
-        font-size: 2em;
-    }
+    .secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #5a2e1c; }
     .modal-content {
+    width: clamp(300px, 80vw, 350px);
+    max-width: 95%;
+
         width: 90%;
         max-width: none;
         padding: 40px 15px 20px;
@@ -482,12 +488,8 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
 
 /* Celulares pequenos */
 @media (max-width: 480px) {
-    .header-texto h1 {
-        font-size: 2em;
-    }
-    .header-texto p {
-        font-size: 1em;
-    }
+    .header-texto h1 { font-size: clamp(2em, 6vw, 5.5em); margin-bottom: 1px; }
+    .header-texto p { font-size: clamp(1em, 3vw, 1.8em); margin-top: 0; }
     .card img {
         height: 120px;
     }
@@ -497,14 +499,30 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     .card p {
         font-size: 0.9em;
     }
-    .secao-titulo {
-        font-size: 1.6em;
-    }
+    .secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #5a2e1c; }
     .modal-content {
+    width: clamp(300px, 80vw, 350px);
+    max-width: 95%;
+
         width: 95%;
         padding: 30px 10px 15px;
     }
     #modalCarrinho ul {
         max-height: 65vh;
     }
+}
+
+/* ===== Ajustes extras para celulares ===== */
+@media (max-width: 600px) {
+    header { padding: 30px 10px; }
+    .header-container { flex-direction: column; gap: 8px; }
+    .logo { width: 100px !important; height: auto; }
+    .card img { height: 120px; }
+    .card { padding: 10px; }
+    .card h3 { font-size: 1em; }
+    .card p { font-size: 0.9em; }
+    .adicionar { padding: 8px 10px; font-size: 0.9em; }
+    nav.menu-nav a { margin: 0 8px; font-size: 1em; }
+    .modal-content { width: 90%; height: auto; max-height: 90vh; overflow-y: auto; }
+    footer { font-size: 0.9em; padding: 10px; }
 }
