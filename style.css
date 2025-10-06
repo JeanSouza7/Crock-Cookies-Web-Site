@@ -1,12 +1,10 @@
-/* Reset e corpo */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { margin: 0; padding: 0; font-family: serif; background-color: #ffffff; color: #5a2e1c; }
 
-/* Header */
 header {
     text-align: center;
     padding: 50px 20px;
-    background-color: #ffb6c1; /* mesma cor que a nav */
+    background-color: #ffb6c1; 
 }
 
 .header-container {
@@ -22,7 +20,6 @@ header {
 .header-texto h1 { font-size: clamp(2em, 6vw, 5.5em); margin-bottom: 1px; }
 .header-texto p { font-size: clamp(1em, 3vw, 1.8em); margin-top: 0; }
 
-/* Navegação fora do header */
 .menu-nav {
     text-align: center;
     margin: 0px 0;
@@ -44,7 +41,6 @@ header {
 }
 .menu-nav a:hover { color: #ffe4ec; }
 
-/* Cards de Cookies/Sobremesas */
 .cards-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 0 20px 30px 20px; }
 
 .card { background-color: #ffb6c1; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; padding: 15px; transition: transform 0.2s; }
@@ -56,10 +52,8 @@ header {
 .adicionar { padding: 10px 15px; background-color: #6B2A0F; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 1em; transition: background-color 0.2s; }
 .adicionar:hover { background-color: #2b150c; }
 
-/* Footer */
 footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-top: 0; color: #ffb6c1; }
 
-/* Carrinho embaixo à direita */
 #iconeCarrinho {
     position: fixed;
     bottom: 20px;
@@ -83,7 +77,6 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
 .pulsando { animation: pulse 0.4s ease; }
 @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.3); } 100% { transform: scale(1); } }
 
-/* Modal do Carrinho */
 .modal { display: none; position: fixed; z-index: 200; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); }
 .modal.show { display: block; }
 .modal-content {
@@ -122,7 +115,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
 .modal-content button:hover { background-color: #6B2A0F; }
 .close { position: absolute; top: 10px; right: 15px; font-size: 1.5em; font-weight: bold; cursor: pointer; color: #6B2A0F; }
 
-/* Home: Hero + Sobre nós juntos com imagem de fundo */
+
 .main-home {
     min-height: 100vh;
     background: url("img/fundo.png") no-repeat center center/cover;
@@ -151,7 +144,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     z-index: 1;
     max-width: 1000px;
     width: 100%;
-    margin-bottom: 0; /* removida margem inferior */
+    margin-bottom: 0; 
 }
 
 .main-home .hero-overlay h1 {
@@ -174,10 +167,8 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     margin-bottom: 0;
 }
 
-/* Seção título */
 .secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #5a2e1c; }
 
-/* Alerta personalizado */
 #alertaPersonalizado {
     display: none;
     position: fixed;
@@ -204,13 +195,13 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     min-height: 100vh;
     padding: 50px 20px;
     text-align: center;
-    background-color: #fff; /* fundo branco para consistência */
+    background-color: #fff; 
     color: #5a2e1c;
 }
 
 .promocoes .secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #5a2e1c; }
 
-/* Grid de cards (igual ao cardapio) */
+
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -218,7 +209,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     padding: 0 20px 30px 20px;
 }
 
-/* Cards de promoções */
+
 .promo-card, .card {
     background-color: #ffb6c1;
     border-radius: 15px;
@@ -298,7 +289,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     align-items: center;
     margin-bottom: 15px;
 }
-/* Opção de entrega / retirada */
+
 #modalCarrinho .opcao-entrega {
     display: flex;
     flex-direction: column;
@@ -324,7 +315,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
 }
 
 #modalCarrinho .opcao-entrega input[type="radio"] {
-    accent-color: #5a2e1c; /* cor do círculo do radio */
+    accent-color: #5a2e1c; 
     transform: scale(1.3);
     cursor: pointer;
 }
@@ -334,7 +325,6 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     box-shadow: 0 0 8px rgba(255, 182, 193, 0.5);
 }
 
-/* Barra de rolagem no carrinho ajustável */
 #modalCarrinho ul {
     max-height: none;
     overflow: visible;
@@ -354,13 +344,13 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     text-align: center;
     transition: right 0.4s ease;
 
-    /* 🔹 Adicione estas linhas */
+
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #6B2A0F #ffe4ec;
 }
 
-/* Estilizando a barra de rolagem (opcional) */
+
 #modalCarrinho ul::-webkit-scrollbar {
     width: 8px;
 }
@@ -383,7 +373,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
 .opcao-entrega label {
     display: flex;
     align-items: center;
-    gap: 10px; /* espaço entre radio e texto */
+    gap: 10px; 
     padding: 10px 15px;
     border: 2px solid #6B2A0F;
     border-radius: 12px;
@@ -392,11 +382,11 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     background-color: #fff0f5;
     color: #5a2e1c;
     transition: 0.3s;
-    justify-content: flex-start; /* Alinha tudo à esquerda */
+    justify-content: flex-start; 
 }
 
 .texto-entrega {
-    margin-left: 10px; /* espaço do radio até o texto */
+    margin-left: 10px; 
     font-weight: normal;
     font-size: 0.95em;
     color: #6B2A0F;
@@ -418,7 +408,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     color: #6B2A0F;
 }
 
-/* Inputs de endereço */
+
 .input-endereco {
     padding: 10px 12px;
     border: 2px solid #6B2A0F;
@@ -433,9 +423,9 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     border-color: #ffb6c1;
     box-shadow: 0 0 5px rgba(255,182,193,0.5);
 }
-/* ===== RESPONSIVIDADE ===== */
 
-/* Tablets */
+
+
 @media (max-width: 1024px) {
     .header-container .logo {
         width: 150px;
@@ -455,7 +445,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     }
 }
 
-/* Celulares médios */
+
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
@@ -486,7 +476,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     }
 }
 
-/* Celulares pequenos */
+
 @media (max-width: 480px) {
     .header-texto h1 { font-size: clamp(2em, 6vw, 5.5em); margin-bottom: 1px; }
     .header-texto p { font-size: clamp(1em, 3vw, 1.8em); margin-top: 0; }
@@ -512,7 +502,6 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     }
 }
 
-/* ===== Ajustes extras para celulares ===== */
 @media (max-width: 600px) {
     header { padding: 30px 10px; }
     .header-container { flex-direction: column; gap: 8px; }

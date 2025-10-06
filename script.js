@@ -1,13 +1,12 @@
-// Recupera carrinho do localStorage ou cria vazio
 let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-// Atualiza contador de itens no carrinho
+
 function atualizarContador() {
     document.getElementById("contadorCarrinho").textContent = carrinho.length;
     localStorage.setItem("carrinho", JSON.stringify(carrinho));
 }
 
-// Alerta personalizado
+
 function mostrarAlerta(mensagem) {
     const alerta = document.getElementById("alertaPersonalizado");
     alerta.textContent = mensagem;
@@ -15,7 +14,7 @@ function mostrarAlerta(mensagem) {
     setTimeout(() => { alerta.style.display = "none"; }, 3000);
 }
 
-// Adicionar item
+
 function adicionarAoCarrinho(nome, preco, imagem) {
     const itemExistente = carrinho.find(item => item.nome === nome);
     if (itemExistente) itemExistente.qtd += 1;
@@ -26,14 +25,12 @@ function adicionarAoCarrinho(nome, preco, imagem) {
     mostrarAlerta(`${nome} adicionado ao carrinho!`);
 }
 
-// Anima ícone
 function pulsarIcone() {
     const icone = document.getElementById("iconeCarrinho");
     icone.classList.add("pulsando");
     setTimeout(() => { icone.classList.remove("pulsando"); }, 400);
 }
 
-// Mostrar carrinho no modal
 function mostrarCarrinho() {
     const modal = document.getElementById("modalCarrinho");
     const lista = document.getElementById("itensCarrinho");
@@ -95,7 +92,7 @@ function mostrarCarrinho() {
         total += item.preco * item.qtd;
     });
 
-    // Info entrega
+
     const entrega = document.querySelector('input[name="entrega"]:checked').value;
     let infoEntrega = entrega === "retirar" ? "Retirar no local" : "Entrega (a calcular)";
 
@@ -104,7 +101,6 @@ function mostrarCarrinho() {
     modal.classList.add("show");
 }
 
-// Alterar quantidade
 function alterarQuantidade(index, delta) {
     carrinho[index].qtd += delta;
     if (carrinho[index].qtd <= 0) carrinho.splice(index, 1);
@@ -112,26 +108,23 @@ function alterarQuantidade(index, delta) {
     mostrarCarrinho();
 }
 
-// Remover item
 function removerItem(index) {
     carrinho.splice(index, 1);
     atualizarContador();
     mostrarCarrinho();
 }
 
-// Fechar modal
+
 function fecharCarrinho() {
     document.getElementById("modalCarrinho").classList.remove("show");
     document.getElementById("iconeCarrinho").classList.remove("modal-aberto");
 }
 
-// Clique fora do modal
 window.onclick = function(event) {
     const modal = document.getElementById("modalCarrinho");
     if (event.target == modal) fecharCarrinho();
 };
 
-// Enviar pedido para WhatsApp
 function enviarParaWhatsApp() {
     if (carrinho.length === 0) {
         mostrarAlerta("O carrinho está vazio!");
@@ -161,11 +154,9 @@ function enviarParaWhatsApp() {
     window.open(link, "_blank");
 }
 
-// Inicialização
 window.onload = () => {
     atualizarContador();''
 
-    // Mostrar/esconder campos de endereço
     document.querySelectorAll('input[name="entrega"]').forEach(radio => {
         radio.addEventListener("change", () => {
             const enderecoDiv = document.getElementById("enderecoEntrega");
@@ -174,7 +165,6 @@ window.onload = () => {
         });
     });
 
-    // Conectar botões de adicionar
     document.querySelectorAll(".adicionar").forEach(botao => {
         botao.addEventListener("click", () => {
             const nome = botao.dataset.nome;

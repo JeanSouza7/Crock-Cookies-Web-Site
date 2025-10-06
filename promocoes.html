@@ -9,22 +9,21 @@
 </head>
 <body>
 
- <!-- Alerta Personalizado -->
+
 <div id="alertaPersonalizado"></div>
 
-<!-- Ícone do Carrinho -->
 <div id="iconeCarrinho" onclick="mostrarCarrinho()">
     🛒 <span id="contadorCarrinho">0</span>
 </div>
 
-<!-- Modal do Carrinho -->
+
 <div id="modalCarrinho" class="modal">
     <div class="modal-content">
         <span class="close" onclick="fecharCarrinho()">&times;</span>
         <h2>Seu Carrinho</h2>
         <ul id="itensCarrinho"></ul>
 
-        <!-- Opção Retirar ou Entrega -->
+
 <div class="opcao-entrega">
     <label>
         <input type="radio" name="entrega" value="retirar" checked onclick="atualizarTotal()">
@@ -37,25 +36,22 @@
     </label>
 </div>
 
-        <!-- Campos de endereço (aparecem só se entrega) -->
         <div id="enderecoEntrega" style="display:none; flex-direction: column; gap: 5px; text-align:left; margin-bottom:10px;">
             <input type="text" id="rua" placeholder="Rua">
             <input type="text" id="bairro" placeholder="Bairro">
             <input type="text" id="numero" placeholder="Número">
         </div>
 
-        <!-- Total -->
+
         <p id="totalCarrinho">Total: R$0,00</p>
 
-        <!-- Nome do Cliente -->
         <input type="text" id="nomeCliente" placeholder="Digite seu nome">
 
-        <!-- Botão Finalizar Pedido -->
         <button onclick="enviarParaWhatsApp()">Finalizar Pedido</button>
     </div>
 </div>
 
-  <!-- Header -->
+
   <header>
     <div class="header-container">
       <img src="img/icon.png" alt="Logo Crock Cookies" class="logo">
@@ -66,20 +62,20 @@
     </div>
   </header>
 
-  <!-- Navegação -->
+
   <nav class="menu-nav">
     <a href="index.html">Home</a>
     <a href="cardapio.html">Cardápio</a>
     <a href="promocoes.html" class="active">Promoções</a>
   </nav>
 
-  <!-- Seção Promoções -->
+  
   <main class="main-promocoes">
     <section class="promocoes">
       <h2 class="secao-titulo">Promoções Especiais</h2>
       <div class="cards-container">
 
-        <!-- Promoção 1 -->
+
         <div class="card">
           <img src="img/promo1.jpg" alt="Combo Cookies">
           <h3>Combo Cookies</h3>
@@ -93,7 +89,7 @@
           </button>
         </div>
 
-        <!-- Promoção 2 -->
+
         <div class="card">
           <img src="img/promo2.jpg" alt="Brownie + Cookie">
           <h3>Brownie + Cookie</h3>
@@ -107,7 +103,7 @@
           </button>
         </div>
 
-        <!-- Promoção 3 -->
+     
         <div class="card">
           <img src="img/promo3.jpg" alt="Cookie de Nutella + Trufa">
           <h3>Cookie Nutella + Trufa</h3>
@@ -125,7 +121,7 @@
     </section>
   </main>
 
-  <!-- Footer -->
+
   <footer id="contato">
     <p>Contato: (19) 99248-0787 | WhatsApp</p>
     <p>E-mail: Jessicacs.contato@gmail.com</p>
@@ -133,16 +129,16 @@
     <p>© 2025 Crock Cookies. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Modal do Carrinho -->
+ 
   <div id="modalCarrinho" class="modal">
     <div class="modal-content">
       <span class="close" onclick="fecharCarrinho()">&times;</span>
       <h2>Seu Carrinho</h2>
 
-      <!-- Lista de itens -->
+      
       <ul id="itensCarrinho"></ul>
 
-      <!-- Opção Retirar ou Entrega -->
+      
       <div style="margin-bottom:15px; text-align:left;">
         <label>
           <input type="radio" name="entrega" value="retirar" checked onclick="atualizarTotal()">
@@ -155,28 +151,27 @@
         </label>
       </div>
 
-      <!-- Campos de endereço (aparecem só se entrega) -->
+  
       <div id="enderecoEntrega" style="display:none; text-align:left;">
         <input type="text" id="rua" placeholder="Rua">
         <input type="text" id="bairro" placeholder="Bairro">
         <input type="text" id="numero" placeholder="Número">
       </div>
 
-      <!-- Total -->
+      
       <p id="totalCarrinho">Total: R$0,00</p>
 
-      <!-- Nome do Cliente -->
+     
       <input type="text" id="nomeCliente" placeholder="Digite seu nome">
 
-      <!-- Botão Finalizar Pedido -->
       <button onclick="enviarParaWhatsApp()">Finalizar Pedido</button>
     </div>
   </div>
 
-  <!-- Script do Carrinho -->
+  
   <script src="script.js"></script>
   <script>
-    // Conectar botões "Adicionar" ao carrinho
+   
     document.querySelectorAll(".adicionar").forEach(botao => {
       botao.addEventListener("click", () => {
         const nome = botao.dataset.nome;

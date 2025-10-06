@@ -9,22 +9,22 @@
 </head>
 <body>
 
-<!-- Alerta Personalizado -->
+
 <div id="alertaPersonalizado"></div>
 
-<!-- Ícone do Carrinho -->
+
 <div id="iconeCarrinho" onclick="mostrarCarrinho()">
     🛒 <span id="contadorCarrinho">0</span>
 </div>
 
-<!-- Modal do Carrinho -->
+
 <div id="modalCarrinho" class="modal">
     <div class="modal-content">
         <span class="close" onclick="fecharCarrinho()">&times;</span>
         <h2>Seu Carrinho</h2>
         <ul id="itensCarrinho"></ul>
 
-        <!-- Opção Retirar ou Entrega -->
+
 <div class="opcao-entrega">
     <label>
         <input type="radio" name="entrega" value="retirar" checked onclick="atualizarTotal()">
@@ -37,25 +37,25 @@
     </label>
 </div>
 
-        <!-- Campos de endereço (aparecem só se entrega) -->
+
         <div id="enderecoEntrega" style="display:none; flex-direction: column; gap: 5px; text-align:left; margin-bottom:10px;">
             <input type="text" id="rua" placeholder="Rua">
             <input type="text" id="bairro" placeholder="Bairro">
             <input type="text" id="numero" placeholder="Número">
         </div>
 
-        <!-- Total -->
+
         <p id="totalCarrinho">Total: R$0,00</p>
 
-        <!-- Nome do Cliente -->
+
         <input type="text" id="nomeCliente" placeholder="Digite seu nome">
 
-        <!-- Botão Finalizar Pedido -->
+
         <button onclick="enviarParaWhatsApp()">Finalizar Pedido</button>
     </div>
 </div>
 
-<!-- Header -->
+
 <header>
     <div class="header-container">
         <img src="img/icon.png" alt="Logo Crock Cookies" class="logo">
@@ -66,7 +66,7 @@
     </div>
 </header>
 
-<!-- Menu Nav -->
+
 <nav class="menu-nav">
     <a href="index.html">Home</a>
     <a href="cardapio.html" class="active">Cardápio</a>
@@ -74,11 +74,11 @@
 </nav>         
 
 <main>
-    <!-- Cookies -->
+
         <section class="produtos">
         <h1 class="secao-titulo">Cookies</h1>
         <div class="cards-container">
-            <!-- Exemplo de cards, continue adicionando os demais -->
+
             <div class="card">
                 <img src="img/Cookies tradicional.jpeg" alt="Cookies Clássico">
                 <h3>Cookies Clássico</h3>
@@ -152,11 +152,11 @@
         </div>
     </section>
 
-    <!-- Sobremesas -->
+
     <section class="produtos">
         <h2 class="secao-titulo">Sobremesas</h2>
         <div class="cards-container">
-            <!-- 10 Cards de Sobremesas -->
+  
             <div class="card">
                 <img src="img/pudim.jpg" alt="Pudim Tradicional">
                 <h3>Pudim Tradicional</h3>
@@ -238,13 +238,12 @@
     <p>© 2025 Crock Cookies. Todos os direitos reservados.</p>
 </footer>
 
-<!-- Script do Carrinho -->
+
 <script src="script.js"></script>
 <script>
 window.onload = () => {
     atualizarContador();
 
-    // Mostrar/esconder campos de endereço
     document.querySelectorAll('input[name="entrega"]').forEach(radio => {
         radio.addEventListener("change", () => {
             const enderecoDiv = document.getElementById("enderecoEntrega");
@@ -253,7 +252,7 @@ window.onload = () => {
         });
     });
 
-    // Conectar botões de adicionar
+
     document.querySelectorAll(".adicionar").forEach(botao => {
         botao.addEventListener("click", () => {
             const nome = botao.dataset.nome;
