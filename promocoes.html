@@ -131,7 +131,43 @@
     <p>E-mail: Jessicacs.contato@gmail.com</p>
     <a href="https://www.instagram.com/jessiicacunhas" target="_blank">Instagram</a>
     <p>© 2025 Crock Cookies. Todos os direitos reservados.</p>
-  </footer>
+</footer>
+
+<!-- Modal do Carrinho -->
+<div id="modalCarrinho" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fecharCarrinho()">&times;</span>
+        <h2>Seu Carrinho</h2>
+
+        <ul id="itensCarrinho"></ul>
+
+        <div class="opcao-entrega">
+            <label>
+                <input type="radio" name="entrega" value="retirar" checked onclick="atualizarTotal()">
+                Retirar no local
+                <span class="endereco-retirada">(Endereco)</span>
+            </label>
+            <label>
+                <input type="radio" name="entrega" value="entrega" onclick="atualizarTotal()">
+                Entrega (a calcular)
+            </label>
+        </div>
+
+        <div id="enderecoEntrega" style="display:none; flex-direction: column; gap: 5px; text-align:left; margin-bottom:10px;">
+            <input type="text" id="rua" placeholder="Rua">
+            <input type="text" id="bairro" placeholder="Bairro">
+            <input type="text" id="numero" placeholder="Número">
+        </div>
+
+        <p id="totalCarrinho">Total: R$0,00</p>
+        <input type="text" id="nomeCliente" placeholder="Digite seu nome">
+        <button onclick="enviarParaWhatsApp()">Finalizar Pedido</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
 
   <!-- Modal do Carrinho -->
   <div id="modalCarrinho" class="modal">
