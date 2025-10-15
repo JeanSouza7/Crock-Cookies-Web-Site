@@ -487,30 +487,57 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
 }
 
 @media (max-width: 480px) {
-    .header-texto h1 { font-size: clamp(2em, 6vw, 5.5em); margin-bottom: 1px; }
-    .header-texto p { font-size: clamp(1em, 3vw, 1.8em); margin-top: 0; }
-    .card img {
-        height: 120px;
-    }
-    .card h3 {
-        font-size: 1em;
-    }
-    .card p {
-        font-size: 0.9em;
-    }
-    .secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #5a2e1c; }
-    .modal-content {
-    width: clamp(300px, 80vw, 350px);
-    max-width: 95%;
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important;
+    gap: 10px !important;
+    padding: 10px !important;
+  }
 
-        width: 95%;
-        padding: 30px 10px 15px;
-    }
-    #modalCarrinho ul {
-        max-height: 65vh;
-    }
+  .card {
+    height: auto !important;
+    padding: 6px !important;
+    border-radius: 10px !important;
+    max-width: 150px !important;
+  }
+
+  .card img {
+    height: 80px !important;
+    border-radius: 8px !important;
+  }
+
+  .card h3 {
+    font-size: 0.85em !important;
+    margin: 4px 0 !important;
+  }
+
+  .card p {
+    font-size: 0.75em !important;
+    line-height: 1.2 !important;
+  }
+
+  .card .preco {
+    font-size: 0.85em !important;
+  }
+
+  .card .adicionar {
+    font-size: 0.75em !important;
+    padding: 4px 6px !important;
+  }
+
+  .secao-titulo {
+    font-size: 1.2em !important;
+  }
+
+  .menu-nav a {
+    font-size: 0.8em !important;
+    margin: 0 4px !important;
+  }
+
+  footer {
+    font-size: 0.7em !important;
+    padding: 5px !important;
+  }
 }
-
 @media (max-width: 600px) {
     header { padding: 30px 10px; }
     .header-container { flex-direction: column; gap: 8px; }
@@ -525,71 +552,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     footer { font-size: 0.9em; padding: 10px; }
 }
 
-@media (max-width: 480px) {
-  body {
-    font-size: 12px;
-  }
 
-  header {
-    padding: 20px 10px;
-  }
-
-  .header-container .logo {
-    width: 80px;
-    height: auto;
-  }
-
-  .header-texto h1 {
-    font-size: 1.3em;
-  }
-
-  .header-texto p {
-    font-size: 0.8em;
-  }
-
-  nav.menu-nav a {
-    font-size: 0.8em;
-    margin: 0 5px;
-  }
-
-  .card {
-    padding: 8px;
-    height: auto;
-  }
-
-  .card img {
-    height: 90px;
-  }
-
-  .card h3 {
-    font-size: 0.9em;
-  }
-
-  .card p,
-  .preco {
-    font-size: 0.8em;
-  }
-
-  .adicionar {
-    font-size: 0.8em;
-    padding: 6px 8px;
-  }
-
-  footer {
-    font-size: 0.7em;
-    padding: 8px;
-  }
-
-  #iconeCarrinho {
-    font-size: 0.9em;
-    padding: 8px 12px;
-  }
-
-  .modal-content {
-    width: 95%;
-    padding: 15px 10px;
-  }
-}
 body.equipe .cards-container {
   display: flex;
   flex-wrap: wrap;
