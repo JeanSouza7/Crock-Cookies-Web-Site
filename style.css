@@ -436,6 +436,95 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     box-shadow: 0 0 5px rgba(255,182,193,0.5);
 }
 
+@media (max-width: 1024px) {
+    .header-container .logo {
+        width: 150px;
+        height: auto;
+    }
+    .header-texto h1 { font-size: clamp(2em, 6vw, 5.5em); margin-bottom: 1px; }
+    .header-texto p { font-size: clamp(1em, 3vw, 1.8em); margin-top: 0; }
+    .card img {
+        height: 180px;
+    }
+    .secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #5a2e1c; }
+    .modal-content {
+    width: clamp(300px, 80vw, 350px);
+    max-width: 95%;
+
+        width: 70%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .header-container .logo {
+        width: 120px;
+    }
+    .header-texto h1 { font-size: clamp(2em, 6vw, 5.5em); margin-bottom: 1px; }
+    .header-texto p { font-size: clamp(1em, 3vw, 1.8em); margin-top: 0; }
+    .cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+    .card img {
+        height: 140px;
+    }
+    .secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #5a2e1c; }
+    .modal-content {
+    width: clamp(300px, 80vw, 350px);
+    max-width: 95%;
+
+        width: 90%;
+        max-width: none;
+        padding: 40px 15px 20px;
+    }
+    #modalCarrinho ul {
+        max-height: 60vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-texto h1 { font-size: clamp(2em, 6vw, 5.5em); margin-bottom: 1px; }
+    .header-texto p { font-size: clamp(1em, 3vw, 1.8em); margin-top: 0; }
+    .card img {
+        height: 120px;
+    }
+    .card h3 {
+        font-size: 1em;
+    }
+    .card p {
+        font-size: 0.9em;
+    }
+    .secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #5a2e1c; }
+    .modal-content {
+    width: clamp(300px, 80vw, 350px);
+    max-width: 95%;
+
+        width: 95%;
+        padding: 30px 10px 15px;
+    }
+    #modalCarrinho ul {
+        max-height: 65vh;
+    }
+}
+
+@media (max-width: 600px) {
+    header { padding: 30px 10px; }
+    .header-container { flex-direction: column; gap: 8px; }
+    .logo { width: 100px !important; height: auto; }
+    .card img { height: 120px; }
+    .card { padding: 10px; }
+    .card h3 { font-size: 1em; }
+    .card p { font-size: 0.9em; }
+    .adicionar { padding: 8px 10px; font-size: 0.9em; }
+    nav.menu-nav a { margin: 0 8px; font-size: 1em; }
+    .modal-content { width: 90%; height: auto; max-height: 90vh; overflow-y: auto; }
+    footer { font-size: 0.9em; padding: 10px; }
+}
+
 @media (max-width: 480px) {
   body {
     font-size: 12px;
