@@ -92,7 +92,6 @@ function mostrarCarrinho() {
         total += item.preco * item.qtd;
     });
 
-
     const entrega = document.querySelector('input[name="entrega"]:checked').value;
     let infoEntrega = entrega === "retirar" ? "Retirar no local" : "Entrega (a calcular)";
 
