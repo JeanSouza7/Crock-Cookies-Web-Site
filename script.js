@@ -101,6 +101,16 @@ function mostrarCarrinho() {
     modal.classList.add("show");
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.querySelector("#modalCarrinho .modal-content");
+  if (modal && !document.getElementById("observacao")) {
+    const textArea = document.createElement("textarea");
+    textArea.id = "observacao";
+    textArea.placeholder = "Observações";
+    modal.insertBefore(textArea, document.getElementById("endereco"));
+  }
+});
+
 function alterarQuantidade(index, delta) {
     carrinho[index].qtd += delta;
     if (carrinho[index].qtd <= 0) carrinho.splice(index, 1);
