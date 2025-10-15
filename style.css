@@ -487,55 +487,91 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
 }
 
 @media (max-width: 480px) {
-  .cards-container {
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important;
-    gap: 10px !important;
-    padding: 10px !important;
+  body {
+    font-size: 11px;
   }
 
-  .card {
-    height: auto !important;
-    padding: 6px !important;
-    border-radius: 10px !important;
-    max-width: 150px !important;
+  header {
+    padding: 15px 5px;
   }
 
-  .card img {
-    height: 80px !important;
-    border-radius: 8px !important;
+  .header-container .logo {
+    width: 70px;
+    height: auto;
   }
 
-  .card h3 {
-    font-size: 0.85em !important;
-    margin: 4px 0 !important;
+  .header-texto h1 {
+    font-size: 1.1em;
   }
 
-  .card p {
-    font-size: 0.75em !important;
-    line-height: 1.2 !important;
+  .header-texto p {
+    font-size: 0.75em;
   }
 
-  .card .preco {
-    font-size: 0.85em !important;
-  }
-
-  .card .adicionar {
-    font-size: 0.75em !important;
-    padding: 4px 6px !important;
-  }
-
-  .secao-titulo {
-    font-size: 1.2em !important;
+  .menu-nav {
+    padding: 6px 0;
   }
 
   .menu-nav a {
+    font-size: 0.75em;
+    margin: 0 3px;
+  }
+
+  /* 👇 Cards menores e mais estreitos */
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important;
+    gap: 6px !important;
+    padding: 6px !important;
+    justify-items: center;
+  }
+
+  .card {
+    width: 130px !important;
+    max-width: 130px !important;
+    height: auto !important;
+    padding: 6px !important;
+    border-radius: 8px !important;
+  }
+
+  .card img {
+    height: 70px !important;
+    border-radius: 6px !important;
+  }
+
+  .card h3 {
     font-size: 0.8em !important;
-    margin: 0 4px !important;
+    margin: 3px 0 !important;
+  }
+
+  .card p {
+    font-size: 0.7em !important;
+    line-height: 1.1 !important;
+  }
+
+  .preco {
+    font-size: 0.8em !important;
+  }
+
+  .adicionar {
+    font-size: 0.7em !important;
+    padding: 3px 5px !important;
   }
 
   footer {
     font-size: 0.7em !important;
     padding: 5px !important;
+  }
+
+  #iconeCarrinho {
+    font-size: 0.8em !important;
+    padding: 6px 10px !important;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .modal-content {
+    width: 95% !important;
+    padding: 10px !important;
   }
 }
 @media (max-width: 600px) {
