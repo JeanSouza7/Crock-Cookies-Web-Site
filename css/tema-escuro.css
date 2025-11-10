@@ -53,6 +53,12 @@ flex-direction: column;justify-content: space-between;height: 480px }
 .adicionar { padding: 10px 15px; background-color: #6B2A0F; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 1em; transition: background-color 0.2s; }
 .adicionar:hover { background-color: #2b150c; }
 
+.produtos .secao-titulo {
+  grid-column: 1 / -1 !important;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
 footer { text-align: center; padding: 15px; background-color: #D3944A; margin-top: 0; color: #5a2e1c; }
 
 #iconeCarrinho {
@@ -203,14 +209,17 @@ footer { text-align: center; padding: 15px; background-color: #D3944A; margin-to
 .promocoes .secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #ffb6c1; }
 
 .sub-titulo {
+  display: block;
+  width: 100%;
   text-align: center;
   font-size: clamp(1.1em, 2.5vw, 1.8em);
   font-weight: 600;
   color: #fff;
   margin: 5px 0 15px;
   background-color: #D3944A;
+  padding: 10px 0;
+  border-radius: 8px; 
 }
-
 
 .cards-container {
     display: grid;
@@ -676,9 +685,5 @@ body.sac section {
 .btn-tema:hover {
     transform: scale(1.2);
 }
-.produtos .secao-titulo {
-  grid-column: 1 / -1 !important;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
+
 
