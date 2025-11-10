@@ -1,4 +1,3 @@
-// === Alternância de tema claro/escuro com persistência ===
 document.addEventListener("DOMContentLoaded", () => {
     const btnTema = document.getElementById("btnTema");
     const linkCSS = document.querySelector("link[rel='stylesheet']");

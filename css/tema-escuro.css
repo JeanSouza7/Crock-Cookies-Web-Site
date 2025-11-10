@@ -402,7 +402,7 @@ footer { text-align: center; padding: 15px; background-color: #D3944A; margin-to
     font-weight: normal;
     font-size: 0.95em;
     color: #2b150c;
-}s
+}
 
 .opcao-entrega label:hover {
     border-color: #ffb6c1;
@@ -664,7 +664,7 @@ body.sac section {
 .btn-tema {
     background: none;
     border: none;
-    font-size: 2px;
+    font-size: 21px;
     font-weight: bold;
     color: #2b150c;
     margin-left: 15px;
@@ -676,3 +676,9 @@ body.sac section {
 .btn-tema:hover {
     transform: scale(1.2);
 }
+.produtos .secao-titulo {
+  grid-column: 1 / -1 !important;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
