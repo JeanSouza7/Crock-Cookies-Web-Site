@@ -1,10 +1,10 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html, body { margin: 0; padding: 0; font-family: serif; background-color: #ffffff; color: #5a2e1c; }
+html, body { margin: 0; padding: 0; font-family: serif; background-color: #2b150c; color: #fff; }
 
 header {
     text-align: center;
     padding: 50px 20px;
-    background-color: #ffb6c1; 
+    background-color: #2b150c; 
 }
 
 .header-container {
@@ -24,26 +24,26 @@ header {
     text-align: center;
     margin: 0px 0;
     font-size: 1.3em;
-    background-color: #5a2e1c;
+    background-color: #ffb6c1;
     padding: 10px 0;
     border-radius: 0px;
 }
 .menu-nav a {
-    color: #fff;
+    color: #2b150c;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
     transition: color 0.2s;
 }
 .menu-nav a.active {
-    color: #ffb6c1;
+    color: #fff;
     font-weight: bold;
 }
 .menu-nav a:hover { color: #ffe4ec; }
 
 .cards-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 0 20px 30px 20px; }
 
-.card { background-color: #ffb6c1; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; padding: 15px; transition: transform 0.2s; display: flex;
+.card { background-color: #ffd98a; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; padding: 15px; transition: transform 0.2s; display: flex;
 flex-direction: column;justify-content: space-between;height: 480px }
 .card:hover { transform: translateY(-5px); }
 .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 15px; }
@@ -53,14 +53,14 @@ flex-direction: column;justify-content: space-between;height: 480px }
 .adicionar { padding: 10px 15px; background-color: #6B2A0F; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 1em; transition: background-color 0.2s; }
 .adicionar:hover { background-color: #2b150c; }
 
-footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-top: 0; color: #ffb6c1; }
+footer { text-align: center; padding: 15px; background-color: #ffb6c1; margin-top: 0; color: #5a2e1c; }
 
 #iconeCarrinho {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #6B2A0F;
-    color: white;
+    background-color: #ffb6c1;
+    color: #2b150c;
     padding: 12px 18px;
     border-radius: 50px;
     font-size: 1.2em;
@@ -72,7 +72,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     gap: 5px;
     transition: background-color 0.2s, transform 0.2s, right 0.4s ease, bottom 0.4s ease;
 }
-#iconeCarrinho:hover { background-color: #6B2A0F; transform: scale(1.05); }
+#iconeCarrinho:hover { background-color: #FFF; transform: scale(1.05); }
 #iconeCarrinho.modal-aberto { right: 370px; bottom: 20px; }
 #contadorCarrinho { font-weight: bold; font-size: 1em; }
 .pulsando { animation: pulse 0.4s ease; }
@@ -84,7 +84,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     width: clamp(300px, 80vw, 350px);
     max-width: 95%;
 
-    background-color: #fff0f5;
+    background-color: #000;
     position: fixed;
     top: 0;
     right: -100%;
@@ -101,25 +101,25 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     width: clamp(300px, 80vw, 350px);
     max-width: 95%;
  right: 0; }
-.modal-content h2 { margin-bottom: 20px; color: #6B2A0F; font-size: 1.8em; }
+.modal-content h2 { margin-bottom: 20px; color: #fff; font-size: 1.8em; }
 .modal-content ul { list-style: none; padding: 0; margin-bottom: 20px; }
-.modal-content li { background-color: #ffe4ec; border-radius: 30px; margin-bottom: 12px; padding: 10px 15px; display: flex; align-items: center; justify-content: space-between; font-size: 1em; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.modal-content li { background-color: #ffb6c1; border-radius: 30px; margin-bottom: 12px; padding: 10px 15px; display: flex; align-items: center; justify-content: space-between; font-size: 1em; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
 .modal-content li img { width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-right: 10px; }
 .modal-content li div { display: flex; align-items: center; }
-.modal-content li div button { padding: 5px 10px; background-color: #6B2A0F; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 1em; transition: background-color 0.2s; }
+.modal-content li div button { padding: 5px 10px; background-color: #fff; color:#2b150c; border: none; border-radius: 8px; cursor: pointer; font-size: 1em; transition: background-color 0.2s; }
 .modal-content li div button:hover { background-color: #6B2A0F; }
 .modal-content li div span { font-weight: bold; font-size: 1em; min-width: 20px; text-align: center; }
-.modal-content li button { margin-left: 10px; padding: 5px 10px; background-color: #6B2A0F; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.9em; transition: background-color 0.2s; }
-.modal-content li button:hover { background-color: #6B2A0F; }
-.modal-content p { font-weight: bold; font-size: 1.2em; color: #6B2A0F; margin-bottom: 15px; }
-.modal-content button { padding: 12px 25px; background-color: #6B2A0F; color: white; border: none; border-radius: 10px; font-size: 1.1em; cursor: pointer; transition: background-color 0.2s; }
-.modal-content button:hover { background-color: #6B2A0F; }
-.close { position: absolute; top: 10px; right: 15px; font-size: 1.5em; font-weight: bold; cursor: pointer; color: #6B2A0F; }
+.modal-content li button { margin-left: 10px; padding: 5px 10px; background-color: #fff; color: #6B2A0F; border: none; border-radius: 8px; cursor: pointer; font-size: 0.9em; transition: background-color 0.2s; }
+.modal-content li button:hover { background-color: #fff; }
+.modal-content p { font-weight: bold; font-size: 1.2em; color: #ffb6c1; margin-bottom: 15px; }
+.modal-content button { padding: 12px 25px; background-color: #ffb6c1; color: #6B2A0F; border: none; border-radius: 10px; font-size: 1.1em; cursor: pointer; transition: background-color 0.2s; }
+.modal-content button:hover { background-color: #fff; }
+.close { position: absolute; top: 10px; right: 15px; font-size: 1.5em; font-weight: bold; cursor: pointer; color: #fff; }
 
 
 .main-home {
     min-height: 100vh;
-    background: url("img/fundo.png") no-repeat center center/cover;
+    background: url("../img/fundo.png") no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -168,15 +168,15 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     margin-bottom: 0;
 }
 
-.secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #5a2e1c; }
+.secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #fff; }
 
 #alertaPersonalizado {
     display: none;
     position: fixed;
     top: 20px;
     right: 20px;
-    background: #6B2A0F;
-    color: #ffb6c1;
+    background: #ffb6c1;
+    color: #6B2A0F;
     padding: 12px 18px;
     border-radius: 6px;
     font-weight: bold;
@@ -200,7 +200,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     color: #5a2e1c;
 }
 
-.promocoes .secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #5a2e1c; }
+.promocoes .secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #ffb6c1; }
 
 .sub-titulo {
   text-align: center;
@@ -264,7 +264,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
 .promo-card .adicionar, .card .adicionar {
     padding: 10px 15px;
     background-color: #6B2A0F;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -280,16 +280,16 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
   width: 90%;
   padding: 10px 15px;
   margin: 8px 0;
-  border: 2px solid #6B2A0F;
+  border: 2px solid #ffb6c1;
   border-radius: 12px;
   font-size: 1em;
   background-color: #fff0f5;
-  color: #5a2e1c;
+  color: #2b150c;
   font-family: inherit;
   resize: none;
 }
 #modalCarrinho input[type="text"]:focus {
-    border-color: #ffb6c1;
+    border-color: #fff;
     box-shadow: 0 0 8px rgba(255, 182, 193, 0.5);
 }
 #enderecoEntrega {
@@ -314,18 +314,18 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     align-items: center;
     gap: 10px;
     padding: 10px 15px;
-    border: 2px solid #6B2A0F;
+    border: 2px solid #fff;
     border-radius: 12px;
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
-    background-color: #fff0f5;
-    color: #5a2e1c;
+    background-color: #ffb6c1;
+    color: #fff0f5;
     width: 100%;
 }
 
 #modalCarrinho .opcao-entrega input[type="radio"] {
-    accent-color: #5a2e1c; 
+    accent-color: #2b150c; 
     transform: scale(1.3);
     cursor: pointer;
 }
@@ -341,7 +341,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
 }
 
 .modal-content {
-    background-color: #fff0f5;
+    background-color: #2b150c;
     position: fixed;
     top: 0;
     right: -100%;
@@ -387,12 +387,12 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     align-items: center;
     gap: 10px; 
     padding: 10px 15px;
-    border: 2px solid #6B2A0F;
+    border: 2px solid #2b150c;
     border-radius: 12px;
     cursor: pointer;
     font-weight: bold;
-    background-color: #fff0f5;
-    color: #5a2e1c;
+    background-color: #fff;
+    color: #fff;
     transition: 0.3s;
     justify-content: flex-start; 
 }
@@ -401,8 +401,8 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     margin-left: 10px; 
     font-weight: normal;
     font-size: 0.95em;
-    color: #6B2A0F;
-}
+    color: #2b150c;
+}s
 
 .opcao-entrega label:hover {
     border-color: #ffb6c1;
@@ -417,13 +417,13 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
 .endereco-retirada {
     font-weight: normal;
     font-size: 0.9em;
-    color: #6B2A0F;
+    color: #fff;
 }
 
 
 .input-endereco {
     padding: 10px 12px;
-    border: 2px solid #6B2A0F;
+    border: 2px solid #2b150c;
     border-radius: 10px;
     font-size: 1em;
     width: 100%;
@@ -545,13 +545,13 @@ body.equipe .card {
 
 body.equipe .card h3 {
   font-size: 1.3em;
-  color: #5a2e1c;
+  color: #2b150c;
   margin-bottom: 8px;
 }
 
 body.equipe .card p {
   font-size: 1em;
-  color: #5a2e1c;
+  color: #2b150c;
   line-height: 1.4;
 }
 
@@ -605,8 +605,8 @@ body.sac section {
 }
 
 .form-sac {
-  background-color: #fff8fa;
-  border: 2px solid #ffb6c1;
+  background-color: #ffb6c1;
+  border: 2px solid #fff;
   border-radius: 12px;
   padding: 25px;
   width: 100%;
@@ -621,7 +621,7 @@ body.sac section {
 
 .form-sac label {
   font-weight: bold;
-  color: #5a2e1c;
+  color: #2b150c;
   text-align: left;
 }
 
@@ -629,17 +629,17 @@ body.sac section {
 .form-sac textarea {
   width: 100%;
   padding: 10px;
-  border: 2px solid #6B2A0F;
+  border: 2px solid #2b150c;
   border-radius: 8px;
-  background-color: #fff0f5;
-  color: #5a2e1c;
+  background-color: #fff;
+  color: #2b150c;
   font-family: inherit;
   font-size: 1em;
   resize: vertical;
 }
 
 .btn-sac {
-  background-color: #6B2A0F;
+  background-color: #2b150c;
   color: white;
   border: none;
   border-radius: 8px;
@@ -650,12 +650,12 @@ body.sac section {
 }
 
 .btn-sac:hover {
-  background-color: #2b150c;
+  background-color: #462214;
 }
 .info-sac {
   text-align: center;
   font-size: 1.1em;
-  color: #5a2e1c;
+  color: #fff;
   margin: 15px auto 25px;
   max-width: 800px;
   display: block;
