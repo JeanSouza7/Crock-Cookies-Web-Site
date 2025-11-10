@@ -16,7 +16,7 @@ function mostrarAlerta(mensagem) {
 
 
 function adicionarAoCarrinho(nome, preco, imagem) {
-    const itemExistente = carrinho.find(item => item.nome === nome);
+    const itemExistente = carrinho.find(item => item.nome === nome && item.preco === preco);
     if (itemExistente) itemExistente.qtd += 1;
     else carrinho.push({ nome, preco, qtd: 1, imagem });
 

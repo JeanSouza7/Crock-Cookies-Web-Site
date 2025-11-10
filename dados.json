@@ -1,32 +1,53 @@
-[
-  { "nome": "Cookies Clássico", "preco": 7, "imagem": "img/Cookies_tradicional.jpeg", "descricao": "Cookie massa fofa com gotas de chocolate ao leite." },
-  { "nome": "Cookies Black", "preco": 7, "imagem": "img/Coockies_Black.jpeg", "descricao": "Cookie de cacau black 100%, com gotas de chocolate ao leite." },
-  { "nome": "Cookies Dadinho", "preco": 8, "imagem": "img/Cookies_dadinho.jpeg", "descricao": "Cookie de massa fofa, chocolate shot picado e recheio de dadinho." },
-  { "nome": "Cookies Negresco", "preco": 9, "imagem": "img/Cookies_de_negresco.jpg", "descricao": "Cookie de massa fofa com gotas de chocolate ao leite e pedaços de Negresco." },
-  { "nome": "Cookies Charge", "preco": 9, "imagem": "img/cookies_de_charge.jpg", "descricao": "Cookie de massa fofa, gotas de chocolate ao leite com pedaços de Charge." },
-  { "nome": "Cookies Amendoim", "preco": 8, "imagem": "img/Cookie_amendoim.jpeg", "descricao": "Cookie de chocolate meio amargo com amendoim crocante." },
-  { "nome": "Cookie recheado com Nutella", "preco": 12, "imagem": "img/Cookies_nutella.webp", "descricao": "Cookie de massa macia com recheio de Nutella." },
-  { "nome": "Cookies Amendoim recheado", "preco": 10, "imagem": "img/Cookie_amendoim.jpeg", "descricao": "Cookie com chocolate meio amargo e recheio de doce de leite e amendoim." },
-  { "nome": "Pudim Tradicional", "preco": 35, "imagem": "img/pudim.jpg", "descricao": "Pudim cremoso de leite condensado (800g)." },
-  { "nome": "Bolo de Limão", "preco": 42, "imagem": "img/Bolo_de_limao.jpg", "descricao": "Bolo de limão com cobertura de limão (1,5kg)." },
-  { "nome": "Bolo de Cenoura", "preco": 38, "imagem": "img/Bolo_de_chocolate.jpg", "descricao": "Bolo de cenoura com cobertura de cacau 50% (1,2kg)." },
-  { "nome": "Bolo de Cenoura com Gotas de Chocolate", "preco": 42, "imagem": "img/Bolo_de_cenoura.jpg", "descricao": "Bolo de cenoura com gotas de chocolate e cobertura de cacau black (1,2kg)." },
-  { "nome": "Bolo de Chocolate com Maracujá", "preco": 50, "imagem": "img/Bolo_maracuja.jpeg", "descricao": "Bolo de chocolate 50% cacau com cobertura de brigadeiro de maracujá (1,3kg)." },
-  { "nome": "Brownie", "preco": 9, "imagem": "img/Brownie.avif", "descricao": "Brownie com sabor intenso de chocolate e textura perfeita (90g)." },
-  { "nome": "Bolo de Laranja", "preco": 25, "imagem": "img/Bolo_laranja.jpg", "descricao": "Clássico bolo de laranja (1,1kg)." },
-  { "nome": "Bolo de Fubá", "preco": 21, "imagem": "img/Bolo_fubá.jpg", "descricao": "Clássico bolo de fubá caseiro (850g)." },
-  { "nome": "Bolo de Fubá com Goiabada", "preco": 25, "imagem": "img/Bolo_goiabada.webp", "descricao": "Delicioso bolo de fubá com pedaços de goiabada (880g)." },
-  { "nome": "Bolo de Chocolate com Brigadeiro", "preco": 45, "imagem": "img/Bolo_brigadeiro.jpg", "descricao": "Bolo de chocolate 50% cacau com cobertura de brigadeiro (1,6kg)." },
-  { "nome": "Combo Cookies Tradicionais - 2 un", "preco": 13, "imagem": "img/Cookies_sortidos.jpg", "descricao": "2 Cookies tradicionais (70g) sortidos." },
-  { "nome": "Combo Cookies Tradicionais - 4 un", "preco": 26, "imagem": "img/Cookies_sortidos.jpg", "descricao": "4 Cookies tradicionais (70g) sortidos." },
-  { "nome": "Combo Cookies Tradicionais - 6 un", "preco": 38, "imagem": "img/Cookies_sortidos.jpg", "descricao": "6 Cookies tradicionais (70g) sortidos." },
-  { "nome": "Combo Cookies Tradicionais - 12 un", "preco": 72, "imagem": "img/Cookies_sortidos.jpg", "descricao": "12 Cookies tradicionais (70g) sortidos." },
-  { "nome": "Combo Cookies Recheados - 2 un", "preco": 21, "imagem": "img/Cookies_recheados.jpg", "descricao": "2 Cookies recheados (100g) sortidos." },
-  { "nome": "Combo Cookies Recheados - 4 un", "preco": 42, "imagem": "img/Cookies_recheados.jpg", "descricao": "4 Cookies recheados (100g) sortidos." },
-  { "nome": "Combo Cookies Recheados - 6 un", "preco": 63, "imagem": "img/Cookies_recheados.jpg", "descricao": "6 Cookies recheados (100g) sortidos." },
-  { "nome": "Combo Cookies Recheados - 12 un", "preco": 125, "imagem": "img/Cookies_recheados.jpg", "descricao": "12 Cookies recheados (100g) sortidos." },
-  { "nome": "Combo Cookies Mix - 2 un", "preco": 20, "imagem": "img/Cookies_misto.jpg", "descricao": "2 Cookies sortidos: mix entre tradicionais (70g) e recheados (100g)." },
-  { "nome": "Combo Cookies Mix - 4 un", "preco": 40, "imagem": "img/Cookies_misto.jpg", "descricao": "4 Cookies sortidos: mix entre tradicionais (70g) e recheados (100g)." },
-  { "nome": "Combo Cookies Mix - 6 un", "preco": 60, "imagem": "img/Cookies_misto.jpg", "descricao": "6 Cookies sortidos: mix entre tradicionais (70g) e recheados (100g)." },
-  { "nome": "Combo Cookies Mix - 12 un", "preco": 120, "imagem": "img/Cookies_misto.jpg", "descricao": "12 Cookies sortidos: mix entre tradicionais (70g) e recheados (100g)." }
-]
+{
+  "cardapio": {
+    "Cookies Tradicionais e Especiais (70g)": [
+      { "nome": "Cookies Clássico", "preco": 7, "imagem": "img/Cookies tradicional.jpeg", "descricao": "Cookie massa fofa com gotas de chocolate ao leite." },
+      { "nome": "Cookies Black", "preco": 7, "imagem": "img/Coockies_Black.jpeg", "descricao": "Cookie massa fofa de cacau black 100%, com gotas de chocolate ao leite." },
+      { "nome": "Cookies Dadinho", "preco": 8, "imagem": "img/Cookies_dadinho.jpeg", "descricao": "Cookie massa fofa, chocolate shot picado e recheio de dadinho." },
+      { "nome": "Cookies Negresco", "preco": 9, "imagem": "img/Cookies_de_negresco.jpg", "descricao": "Cookie massa fofa com gotas de chocolate ao leite e pedaços de Negresco." },
+      { "nome": "Cookies Charge", "preco": 9, "imagem": "img/cookies_de_charge.jpg", "descricao": "Cookie massa fofa com gotas de chocolate ao leite e pedaços de Charge." },
+      { "nome": "Cookies Amendoim", "preco": 8, "imagem": "img/Cookie_amendoim.jpeg", "descricao": "Cookie de chocolate meio amargo com amendoim crocante." }
+    ],
+
+    "Cookies Recheados (100g)": [
+      { "nome": "Cookie recheado com Nutella", "preco": 12, "imagem": "img/Cookies_nutella.webp", "descricao": "Cookie de massa macia com recheio de Nutella." },
+      { "nome": "Cookies Amendoim recheado", "preco": 10, "imagem": "img/Cookie_amendoim.jpeg", "descricao": "Cookie com chocolate meio amargo e recheio de doce de leite e amendoim." }
+    ],
+
+    "Sobremesas": [
+      { "nome": "Pudim Tradicional", "preco": 35, "imagem": "img/pudim.jpg", "descricao": "Pudim cremoso de leite condensado (800g)." },
+      { "nome": "Bolo de Limão", "preco": 42, "imagem": "img/Bolo_de_limao.jpg", "descricao": "Bolo de limão com cobertura de limão (1,5kg)." },
+      { "nome": "Bolo de Cenoura", "preco": 38, "imagem": "img/Bolo_de_chocolate.jpg", "descricao": "Bolo de cenoura com cobertura de cacau 50% (1,2kg)." },
+      { "nome": "Bolo de Cenoura com Gotas de Chocolate", "preco": 42, "imagem": "img/Bolo_de_cenoura.jpg", "descricao": "Bolo de cenoura com gotas de chocolate e cobertura de cacau black (1,2kg)." },
+      { "nome": "Bolo de Chocolate com Maracujá", "preco": 50, "imagem": "img/Bolo_maracuja.jpeg", "descricao": "Bolo de chocolate 50% cacau com cobertura de brigadeiro de maracujá (1,3kg)." },
+      { "nome": "Brownie", "preco": 9, "imagem": "img/Brownie.avif", "descricao": "Brownie com sabor intenso de chocolate e textura perfeita (90g)." },
+      { "nome": "Bolo de Laranja", "preco": 25, "imagem": "img/Bolo_laranja.jpg", "descricao": "Clássico bolo de laranja (1,1kg)." },
+      { "nome": "Bolo de Fubá", "preco": 21, "imagem": "img/Bolo_fubá.jpg", "descricao": "Clássico bolo de fubá caseiro (850g)." },
+      { "nome": "Bolo de Fubá com Goiabada", "preco": 25, "imagem": "img/Bolo_goiabada.webp", "descricao": "Delicioso bolo de fubá com pedaços de goiabada (880g)." },
+      { "nome": "Bolo de Chocolate com Brigadeiro", "preco": 45, "imagem": "img/Bolo_brigadeiro.jpg", "descricao": "Bolo de chocolate 50% cacau com cobertura de brigadeiro (1,6kg)." }
+    ]
+  },
+
+  "promocoes": {
+    "Combos Cookies Tradicionais": [
+      { "nome": "Combo Cookies Tradicionais - 2 un", "preco": 13, "imagem": "img/Cookies_sortidos.jpg", "descricao": "2 Cookies tradicionais (70g) sortidos." },
+      { "nome": "Combo Cookies Tradicionais - 4 un", "preco": 26, "imagem": "img/Cookies_sortidos.jpg", "descricao": "4 Cookies tradicionais (70g) sortidos." },
+      { "nome": "Combo Cookies Tradicionais - 6 un", "preco": 38, "imagem": "img/Cookies_sortidos.jpg", "descricao": "6 Cookies tradicionais (70g) sortidos." },
+      { "nome": "Combo Cookies Tradicionais - 12 un", "preco": 72, "imagem": "img/Cookies_sortidos.jpg", "descricao": "12 Cookies tradicionais (70g) sortidos." }
+    ],
+
+    "Combos Cookies Recheados": [
+      { "nome": "Combo Cookies Recheados - 2 un", "preco": 21, "imagem": "img/Cookies_recheados.jpg", "descricao": "2 Cookies recheados (100g) sortidos." },
+      { "nome": "Combo Cookies Recheados - 4 un", "preco": 42, "imagem": "img/Cookies_recheados.jpg", "descricao": "4 Cookies recheados (100g) sortidos." },
+      { "nome": "Combo Cookies Recheados - 6 un", "preco": 63, "imagem": "img/Cookies_recheados.jpg", "descricao": "6 Cookies recheados (100g) sortidos." },
+      { "nome": "Combo Cookies Recheados - 12 un", "preco": 125, "imagem": "img/Cookies_recheados.jpg", "descricao": "12 Cookies recheados (100g) sortidos." }
+    ],
+
+    "Combos Cookies Mix": [
+      { "nome": "Combo Cookies Mix - 2 un", "preco": 20, "imagem": "img/Cookies_misto.jpg", "descricao": "2 Cookies sortidos: mix entre tradicionais (70g) e recheados (100g)." },
+      { "nome": "Combo Cookies Mix - 4 un", "preco": 40, "imagem": "img/Cookies_misto.jpg", "descricao": "4 Cookies sortidos: mix entre tradicionais (70g) e recheados (100g)." },
+      { "nome": "Combo Cookies Mix - 6 un", "preco": 60, "imagem": "img/Cookies_misto.jpg", "descricao": "6 Cookies sortidos: mix entre tradicionais (70g) e recheados (100g)." },
+      { "nome": "Combo Cookies Mix - 12 un", "preco": 120, "imagem": "img/Cookies_misto.jpg", "descricao": "12 Cookies sortidos: mix entre tradicionais (70g) e recheados (100g)." }
+    ]
+  }
+}

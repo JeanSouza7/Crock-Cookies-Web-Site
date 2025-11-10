@@ -24,7 +24,7 @@ header {
     text-align: center;
     margin: 0px 0;
     font-size: 1.3em;
-    background-color: #ffb6c1;
+    background-color: #D3944A;
     padding: 10px 0;
     border-radius: 0px;
 }
@@ -39,11 +39,11 @@ header {
     color: #fff;
     font-weight: bold;
 }
-.menu-nav a:hover { color: #ffe4ec; }
+.menu-nav a:hover { color: #6B2A0F; }
 
 .cards-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 0 20px 30px 20px; }
 
-.card { background-color: #ffd98a; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; padding: 15px; transition: transform 0.2s; display: flex;
+.card { background-color: #D3944A; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; padding: 15px; transition: transform 0.2s; display: flex;
 flex-direction: column;justify-content: space-between;height: 480px }
 .card:hover { transform: translateY(-5px); }
 .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 15px; }
@@ -53,13 +53,13 @@ flex-direction: column;justify-content: space-between;height: 480px }
 .adicionar { padding: 10px 15px; background-color: #6B2A0F; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 1em; transition: background-color 0.2s; }
 .adicionar:hover { background-color: #2b150c; }
 
-footer { text-align: center; padding: 15px; background-color: #ffb6c1; margin-top: 0; color: #5a2e1c; }
+footer { text-align: center; padding: 15px; background-color: #D3944A; margin-top: 0; color: #5a2e1c; }
 
 #iconeCarrinho {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #ffb6c1;
+    background-color: #D3944A;
     color: #2b150c;
     padding: 12px 18px;
     border-radius: 50px;
@@ -103,7 +103,7 @@ footer { text-align: center; padding: 15px; background-color: #ffb6c1; margin-to
  right: 0; }
 .modal-content h2 { margin-bottom: 20px; color: #fff; font-size: 1.8em; }
 .modal-content ul { list-style: none; padding: 0; margin-bottom: 20px; }
-.modal-content li { background-color: #ffb6c1; border-radius: 30px; margin-bottom: 12px; padding: 10px 15px; display: flex; align-items: center; justify-content: space-between; font-size: 1em; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.modal-content li { background-color: #D3944A; border-radius: 30px; margin-bottom: 12px; padding: 10px 15px; display: flex; align-items: center; justify-content: space-between; font-size: 1em; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
 .modal-content li img { width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-right: 10px; }
 .modal-content li div { display: flex; align-items: center; }
 .modal-content li div button { padding: 5px 10px; background-color: #fff; color:#2b150c; border: none; border-radius: 8px; cursor: pointer; font-size: 1em; transition: background-color 0.2s; }
@@ -111,9 +111,9 @@ footer { text-align: center; padding: 15px; background-color: #ffb6c1; margin-to
 .modal-content li div span { font-weight: bold; font-size: 1em; min-width: 20px; text-align: center; }
 .modal-content li button { margin-left: 10px; padding: 5px 10px; background-color: #fff; color: #6B2A0F; border: none; border-radius: 8px; cursor: pointer; font-size: 0.9em; transition: background-color 0.2s; }
 .modal-content li button:hover { background-color: #fff; }
-.modal-content p { font-weight: bold; font-size: 1.2em; color: #ffb6c1; margin-bottom: 15px; }
-.modal-content button { padding: 12px 25px; background-color: #ffb6c1; color: #6B2A0F; border: none; border-radius: 10px; font-size: 1.1em; cursor: pointer; transition: background-color 0.2s; }
-.modal-content button:hover { background-color: #fff; }
+.modal-content p { font-weight: bold; font-size: 1.2em; color: #fff; margin-bottom: 15px; }
+.modal-content button { padding: 12px 25px; background-color: #D3944A; color: #fff; border: none; border-radius: 10px; font-size: 1.1em; cursor: pointer; transition: background-color 0.2s; }
+.modal-content button:hover { background-color: #6B2A0F; }
 .close { position: absolute; top: 10px; right: 15px; font-size: 1.5em; font-weight: bold; cursor: pointer; color: #fff; }
 
 
@@ -150,7 +150,7 @@ footer { text-align: center; padding: 15px; background-color: #ffb6c1; margin-to
 
 .main-home .hero-overlay h1 {
     font-size: 3em;
-    color: #ffb6c1;
+    color: #D3944A;
     margin-bottom: 15px;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
 }
@@ -164,7 +164,7 @@ footer { text-align: center; padding: 15px; background-color: #ffb6c1; margin-to
 
 .main-home .sobre h2 {
     font-size: 2.8em;
-    color: #ffb6c1;
+    color: #D3944A;
     margin-bottom: 0;
 }
 
@@ -175,8 +175,8 @@ footer { text-align: center; padding: 15px; background-color: #ffb6c1; margin-to
     position: fixed;
     top: 20px;
     right: 20px;
-    background: #ffb6c1;
-    color: #6B2A0F;
+    background: #D3944A;
+    color: #fff;
     padding: 12px 18px;
     border-radius: 6px;
     font-weight: bold;
@@ -206,9 +206,9 @@ footer { text-align: center; padding: 15px; background-color: #ffb6c1; margin-to
   text-align: center;
   font-size: clamp(1.1em, 2.5vw, 1.8em);
   font-weight: 600;
-  color: #5a2e1c;
+  color: #fff;
   margin: 5px 0 15px;
-  background-color: #ffb6c1;
+  background-color: #D3944A;
 }
 
 
@@ -221,7 +221,7 @@ footer { text-align: center; padding: 15px; background-color: #ffb6c1; margin-to
 
 
 .promo-card, .card {
-    background-color: #ffb6c1;
+    background-color: #D3944A;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: center;
@@ -245,20 +245,20 @@ footer { text-align: center; padding: 15px; background-color: #ffb6c1; margin-to
     font-weight: bold;
     font-size: 1.2em;
     margin-bottom: 5px;
-    color: #5a2e1c;
+    color: #fff;
 }
 
 .promo-card p, .card p {
     font-weight: bold;
     font-size: 1em;
     margin-bottom: 10px;
-    color: #5a2e1c;
+    color: #2b150c;
 }
 
 .promo-card .preco, .card .preco {
     font-weight: bold;
     font-size: 1.2em;
-    color: #6B2A0F;
+    color: #2b150c;
 }
 
 .promo-card .adicionar, .card .adicionar {
@@ -280,17 +280,17 @@ footer { text-align: center; padding: 15px; background-color: #ffb6c1; margin-to
   width: 90%;
   padding: 10px 15px;
   margin: 8px 0;
-  border: 2px solid #ffb6c1;
+  border: 2px solid #D3944A;
   border-radius: 12px;
   font-size: 1em;
-  background-color: #fff0f5;
+  background-color: #fff;
   color: #2b150c;
   font-family: inherit;
   resize: none;
 }
 #modalCarrinho input[type="text"]:focus {
     border-color: #fff;
-    box-shadow: 0 0 8px rgba(255, 182, 193, 0.5);
+    box-shadow: 0 0 8px rgba(211, 148, 74, 0.8);
 }
 #enderecoEntrega {
     display: flex;
@@ -319,8 +319,8 @@ footer { text-align: center; padding: 15px; background-color: #ffb6c1; margin-to
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
-    background-color: #ffb6c1;
-    color: #fff0f5;
+    background-color: #D3944A;
+    color: #fff;
     width: 100%;
 }
 
@@ -331,8 +331,8 @@ footer { text-align: center; padding: 15px; background-color: #ffb6c1; margin-to
 }
 
 #modalCarrinho .opcao-entrega label:hover {
-    border-color: #ffb6c1;
-    box-shadow: 0 0 8px rgba(255, 182, 193, 0.5);
+    border-color: #fff;
+    box-shadow: 0 0 8px rgba(211, 148, 74, 0.8);
 }
 
 #modalCarrinho ul {
@@ -357,7 +357,7 @@ footer { text-align: center; padding: 15px; background-color: #ffb6c1; margin-to
 
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: #6B2A0F #ffe4ec;
+    scrollbar-color: #6B2A0F #D3944A;
 }
 
 
@@ -369,7 +369,7 @@ footer { text-align: center; padding: 15px; background-color: #ffb6c1; margin-to
     border-radius: 10px;
 }
 #modalCarrinho ul::-webkit-scrollbar-track {
-    background: #ffe4ec;
+    background: #fff;
     border-radius: 10px;
 }
 
@@ -406,7 +406,7 @@ footer { text-align: center; padding: 15px; background-color: #ffb6c1; margin-to
 
 .opcao-entrega label:hover {
     border-color: #ffb6c1;
-    box-shadow: 0 0 8px rgba(255, 182, 193, 0.5);
+    box-shadow: 0 0 8px rgba(211, 148, 74, 0.8);
 }
 
 .opcao-entrega input[type="radio"] {
@@ -535,7 +535,7 @@ body.equipe .cards-container {
 }
 
 body.equipe .card {
-  background-color: #ffb6c1;
+  background-color: #D3944A;
   border-radius: 10px;
   text-align: center;
   padding: 20px;
@@ -545,13 +545,13 @@ body.equipe .card {
 
 body.equipe .card h3 {
   font-size: 1.3em;
-  color: #2b150c;
+  color: #fff;
   margin-bottom: 8px;
 }
 
 body.equipe .card p {
   font-size: 1em;
-  color: #2b150c;
+  color: #fff;
   line-height: 1.4;
 }
 
@@ -583,7 +583,7 @@ body.equipe .card p {
   text-align: left;      
   font-size: 1.3em;
   color: #fff;
-  border: 3px solid #ffb6c1;
+  border: 3px solid #D3944A;
   border-radius: 10px;
 
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -605,7 +605,7 @@ body.sac section {
 }
 
 .form-sac {
-  background-color: #ffb6c1;
+  background-color: #D3944A;
   border: 2px solid #fff;
   border-radius: 12px;
   padding: 25px;
@@ -659,15 +659,18 @@ body.sac section {
   margin: 15px auto 25px;
   max-width: 800px;
   display: block;
+
 }
 .btn-tema {
     background: none;
     border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: inherit;
-    margin-left: 10px;
+    font-size: 2px;
+    font-weight: bold;
+    color: #2b150c;
+    margin-left: 15px;
     transition: transform 0.3s;
+    font-family: inherit
+
 }
 
 .btn-tema:hover {
