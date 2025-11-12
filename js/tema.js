@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
         linkCSS.href = novoTema;
         localStorage.setItem("tema", novoTema);
 
-        btnTema.textContent = novoTema.includes("escuro") ? "☀️Tema Claro" : "🌙Tema Escuro";
+        btnTema.textContent = novoTema.includes("escuro") ? "Tema Claro" : "Tema Escuro";
     });
 
-    btnTema.textContent = temaSalvo.includes("escuro") ? "☀️Tema Claro" : "🌙Tema Escuro";
+    btnTema.textContent = temaSalvo.includes("escuro") ? "Tema Claro" : "Tema Escuro";
 });

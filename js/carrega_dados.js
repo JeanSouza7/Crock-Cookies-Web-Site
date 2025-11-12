@@ -67,7 +67,6 @@ function exibirCategorias(secaoDados) {
     });
   }
 
-
   registrarEventosDeAdicao();
 }
 

@@ -123,7 +123,6 @@ function removerItem(index) {
     mostrarCarrinho();
 }
 
-
 function fecharCarrinho() {
     document.getElementById("modalCarrinho").classList.remove("show");
     document.getElementById("iconeCarrinho").classList.remove("modal-aberto");

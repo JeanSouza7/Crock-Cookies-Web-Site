@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const campoEmail = document.getElementById("email");
   let campoCPF = document.getElementById("cpf");
 
-  // Adiciona campo de CPF se não existir
   if (!campoCPF) {
     const labelCPF = document.createElement("label");
     labelCPF.setAttribute("for", "cpf");
@@ -20,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     campoCPF.insertAdjacentElement("beforebegin", labelCPF);
   }
 
-  // Reaproveita seu alerta existente
   let alerta = document.getElementById("alertaPersonalizado");
   if (!alerta) {
     alerta = document.createElement("div");
@@ -28,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(alerta);
   }
 
-  // Função para mostrar o alerta
   const mostrarAlerta = (mensagem) => {
     alerta.textContent = mensagem;
     alerta.style.display = "block";
@@ -37,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000);
   };
 
-  // Validação ao enviar o formulário
   form.addEventListener("submit", (event) => {
     const email = campoEmail.value.trim();
     const cpf = campoCPF.value.trim();
@@ -49,9 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
 
       if (!emailValido) {
-        mostrarAlerta("⚠️ E-mail inválido! Use o formato: nome@dominio.com");
+        mostrarAlerta(" E-mail inválido! Use o formato: joao.sivla@net.com");
       } else if (!cpfValido) {
-        mostrarAlerta("⚠️ CPF inválido! Use o formato: 999.999.999-99");
+        mostrarAlerta(" CPF inválido! Use o formato: 999.999.999-99");
       }
     }
   });

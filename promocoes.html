@@ -16,13 +16,11 @@
     🛒 <span id="contadorCarrinho">0</span>
 </div>
 
-
 <div id="modalCarrinho" class="modal">
     <div class="modal-content">
         <span class="close" onclick="fecharCarrinho()">&times;</span>
         <h2>Seu Carrinho</h2>
         <ul id="itensCarrinho"></ul>
-
 
 <div class="opcao-entrega">
     <label>
@@ -42,7 +40,8 @@
             <input type="text" id="numero" placeholder="Número">
         </div>
 
-
+        <textarea id="observacao" placeholder="Observações"></textarea>
+        
         <p id="totalCarrinho">Total: R$0,00</p>
 
         <input type="text" id="nomeCliente" placeholder="Digite seu nome">
@@ -67,7 +66,7 @@
     <a href="promocoes.html" class="active">Promoções</a>
     <a href="equipe.html">Equipe</a>
     <a href="sac.html">SAC</a>
-    <button id="btnTema" class="btn-tema">🌙</button>
+    <button id="btnTema" class="btn-tema"></button>
   </nav>
 
 <main>
@@ -76,7 +75,6 @@
   </section>
 </main>
 
-
   <footer id="contato">
     <p>Contato: (19) 99248-0787 | WhatsApp</p>
     <p>E-mail: Jessicacs.contato@gmail.com</p>
@@ -84,47 +82,9 @@
     <p>© 2025 Crock Cookies. Todos os direitos reservados.</p>
   </footer>
 
- 
-  <div id="modalCarrinho" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="fecharCarrinho()">&times;</span>
-      <h2>Seu Carrinho</h2>
-
-      
-      <ul id="itensCarrinho"></ul>
-
-      
-      <div style="margin-bottom:15px; text-align:left;">
-        <label>
-          <input type="radio" name="entrega" value="retirar" checked onclick="atualizarTotal()">
-          Retirar no local
-        </label>
-        <br>
-        <label>
-          <input type="radio" name="entrega" value="entrega" onclick="atualizarTotal()">
-          Entrega (R$5,00)
-        </label>
-      </div>
-
-  
-      <div id="enderecoEntrega" style="display:none; text-align:left;">
-        <input type="text" id="rua" placeholder="Rua">
-        <input type="text" id="bairro" placeholder="Bairro">
-        <input type="text" id="numero" placeholder="Número">
-      </div>
-
-
-      
-      <p id="totalCarrinho">Total: R$0,00</p>
-     
-      <input type="text" id="nomeCliente" placeholder="Digite seu nome">
-
-      <button onclick="enviarParaWhatsApp()">Finalizar Pedido</button>
-    </div>
-  </div>
-
   <script src="js/carrega_dados.js"></script>
   <script src="js/script.js"></script>
   <script src="js/tema.js"></script>
+
 </body>
 </html>
