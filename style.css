@@ -174,7 +174,7 @@ footer { text-align: center; padding: 15px; background-color: #5a2e1c; margin-to
     margin-bottom: 0;
 }
 
-.secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #5a2e1c; }
+.secao-titulo { text-align: center; font-size: clamp(1.6em, 5vw, 3em); font-weight: bold; margin: 10px 0; color: #5a2e1c; background-color: #2b150c;}
 
 #alertaPersonalizado {
     display: none;
