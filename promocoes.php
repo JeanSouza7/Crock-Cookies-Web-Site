@@ -43,10 +43,9 @@ $error = $result["error"];
 
 <body class="produtos">
 
-<!-- ALERTA -->
 <div id="alertaPersonalizado"></div>
 
-<!-- CARRINHO -->
+
 <div id="iconeCarrinho" onclick="mostrarCarrinho()">
     🛒 <span id="contadorCarrinho">0</span>
 </div>

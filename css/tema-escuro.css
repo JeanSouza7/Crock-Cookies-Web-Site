@@ -277,8 +277,11 @@ footer { text-align: center; padding: 15px; background-color: #D3944A; margin-to
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 17px;
     transition: background-color 0.2s;
+    font-family: inherit;
+    font-weight: bold;
+
 }
 
 .promo-card .adicionar:hover, .card .adicionar:hover {
@@ -685,5 +688,223 @@ body.sac section {
 .btn-tema:hover {
     transform: scale(1.2);
 }
+.btn-add-item {
+    background-color: #D3944A;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 20px;
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: bold;
+}
 
+.btn-add-item:hover {
+    background-color: #aa702e;
+    transform: scale(1.05);
+}
 
+.btn-editar,
+.btn-deletar {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    margin-top: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+    text-align: center;
+    font-size: 17px;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.btn-editar {
+    background-color: #ffb6c1;
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color: #cf939c;
+    transform: scale(1.03);
+}
+
+.btn-deletar {
+    background-color: #8b3a3a;
+    color: white;
+}
+
+.btn-deletar:hover {
+    background-color: #8d1c1c;
+    transform: scale(1.03);
+}
+
+.form-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #D3944A;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #2b150c;
+    margin-bottom: 20px;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-grid label {
+    font-weight: bold;
+    color: #2b150c;
+    margin-bottom: 5px;
+}
+
+.form-grid input,
+.form-grid textarea,
+.form-grid select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b48b7c;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #2b150c;
+    font-family: inherit;
+}
+
+.form-grid textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px;
+    background: #2b150c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-submit:hover {
+    background: #462214;
+}
+
+.btn-cadastrar {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #2b150c;
+    color: white !important;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 20px;
+    
+}
+
+.btn-cadastrar:hover {
+    background: #462214;
+}
+#categoria {
+    background-color: #fff;
+    color: #5a2e1c;
+    font-family: inherit;
+    font-weight: bold;
+}
+#categoria option:checked {
+  background-color: #5a2e1c;
+  color: #fff;
+}
+.delete-confirm-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 5000;
+}
+
+.delete-confirm-overlay.show {
+    display: flex;
+}
+
+.delete-confirm-box {
+    background: #2b150c;
+    color: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    animation: popupScale 0.25s ease;
+}
+
+@keyframes popupScale {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.delete-confirm-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.delete-confirm-box p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.delete-confirm-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.delete-confirm-btn {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+    font-family: inherit;
+}
+
+.delete-confirm-btn.cancel {
+    background: #D3944A;
+    color: #fff;
+}
+.delete-confirm-btn.cancel:hover {
+    background: #aa702e;
+}
+
+.delete-confirm-btn.confirm {
+    background: #8b3a3a;
+    color: white;
+}
+.delete-confirm-btn.confirm:hover {
+    background: #8d1c1c;
+}

@@ -42,8 +42,6 @@ $error = $result["error"];
 </head>
 
 <body class="produtos">
-
-<!-- ALERTA -->
 <div id="alertaPersonalizado"></div>
 
 <!-- CARRINHO -->
@@ -56,17 +54,17 @@ $error = $result["error"];
         <h2>Seu Carrinho</h2>
         <ul id="itensCarrinho"></ul>
 
-<div class="opcao-entrega">
-    <label>
-        <input type="radio" name="entrega" value="retirar" checked onclick="atualizarTotal()">
-        Retirar no local
-        <span class="endereco-retirada">(Endereco)</span>
-    </label>
-    <label>
-        <input type="radio" name="entrega" value="entrega" onclick="atualizarTotal()">
-        Entrega (a calcular)
-    </label>
-</div>
+        <div class="opcao-entrega">
+            <label>
+                <input type="radio" name="entrega" value="retirar" checked onclick="atualizarTotal()">
+                Retirar no local
+                <span class="endereco-retirada">(Endereco)</span>
+            </label>
+            <label>
+                <input type="radio" name="entrega" value="entrega" onclick="atualizarTotal()">
+                Entrega (a calcular)
+            </label>
+        </div>
 
         <div id="enderecoEntrega" style="display:none; flex-direction: column; gap: 5px; text-align:left; margin-bottom:10px;">
             <input type="text" id="rua" placeholder="Rua">
@@ -83,10 +81,6 @@ $error = $result["error"];
         <button onclick="enviarParaWhatsApp()">Finalizar Pedido</button>
     </div>
 </div>
-
-
-
-
 <header>
     <div class="header-container">
         <img src="img/icon.png" class="logo" alt="Logo">
@@ -107,18 +101,19 @@ $error = $result["error"];
 </nav>
 
 <main>
-    <section class="produtos">
+    <button class="btn-add-item" onclick="window.location.href='cardapio_form.php'">
+    + Cadastrar Novo Item
+</button>
+    <section class="produtos"> 
         <div class="cards-container">
 
             <?php if ($error): ?>
-                <p style="color:red; font-size:18px; text-align:center;">
-                    Erro ao carregar cardápio: <?= htmlspecialchars($error) ?>
-                </p>
+                <p style="color:red; text-align:center;"><?= htmlspecialchars($error) ?></p>
 
             <?php elseif (!empty($items)): ?>
 
                 <?php
-                // Agrupa categorias
+
                 $grupos = [];
                 foreach ($items as $item) {
                     $grupos[$item["categoria"]][] = $item;
@@ -126,16 +121,19 @@ $error = $result["error"];
 
                 foreach ($grupos as $categoria => $lista):
                 ?>
+
                     <h2 class="secao-titulo sub-titulo"><?= htmlspecialchars($categoria) ?></h2>
 
                     <?php foreach ($lista as $produto): ?>
-                        <div class="card">
+                        <div class="card" data-id="<?= $produto['id'] ?>">
                             <img src="<?= htmlspecialchars($produto["imagem"]) ?>" class="card-img">
 
                             <h3><?= htmlspecialchars($produto["nome"]) ?></h3>
                             <p><?= htmlspecialchars($produto["descricao"]) ?></p>
 
-                            <span class="preco">R$<?= number_format($produto["preco"], 2, ',', '.') ?></span>
+                            <span class="preco">R$
+                                <?= number_format($produto["preco"], 2, ',', '.') ?>
+                            </span>
 
                             <button class="adicionar"
                                 data-nome="<?= htmlspecialchars($produto["nome"]) ?>"
@@ -143,6 +141,17 @@ $error = $result["error"];
                                 data-img="<?= htmlspecialchars($produto["imagem"]) ?>">
                                 Adicionar
                             </button>
+
+                            <button class="btn-editar"
+                            onclick="window.location.href='cardapio_form.php?action=editar&id=<?= $produto['id'] ?>'">
+                            Editar
+                            </button>
+
+                            <button class="btn-deletar"
+                                onclick="deleteCardapio(<?= $produto['id'] ?>)">
+                                Deletar
+                            </button>
+
                         </div>
                     <?php endforeach; ?>
 
@@ -165,22 +174,21 @@ $error = $result["error"];
 
 <script src="js/script.js"></script>
 <script src="js/tema.js"></script>
+<script src="js/cardapio.js"></script>
+<script src="js/deletar_cardapio.js"></script>
 
-<script>
-window.onload = () => {
-    atualizarContador();
+<div class="delete-confirm-overlay" id="deleteConfirm">
+    <div class="delete-confirm-box">
+        <h3>Confirmar exclusão</h3>
+        <p>Tem certeza que deseja excluir este item?</p>
 
-document.addEventListener("click", function(e) {
-    if (e.target.classList.contains("adicionar")) {
+        <div class="delete-confirm-buttons">
+            <button class="delete-confirm-btn cancel" id="deleteCancel">Cancelar</button>
+            <button class="delete-confirm-btn confirm" id="deleteOk">Deletar</button>
+        </div>
+    </div>
+</div>
 
-        const nome = e.target.dataset.nome;
-        const preco = parseFloat(e.target.dataset.preco);
-        const imagem = e.target.dataset.img;
-
-        adicionarAoCarrinho(nome, preco, imagem);
-    }
-});
-</script>
 
 </body>
 </html>
