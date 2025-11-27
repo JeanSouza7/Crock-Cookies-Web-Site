@@ -189,6 +189,18 @@ $error = $result["error"];
     </div>
 </div>
 
+<div class="delete-success-overlay" id="deleteSuccess" style="display:none;">
+    <div class="delete-success-box">
+        <h3>Sucesso!</h3>
+        <p>Item deletado com sucesso.</p>
+
+        <div class="delete-success-buttons">
+            <button class="delete-success-btn" id="deleteSuccessOk">OK</button>
+        </div>
+    </div>
+</div>
+
+
 
 </body>
 </html>

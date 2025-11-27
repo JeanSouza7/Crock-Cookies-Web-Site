@@ -12,6 +12,14 @@ $data = json_decode(file_get_contents("php://input"), true);
 
 $resource = $_GET['resource'] ?? null;
 $id = $_GET['id'] ?? null;
+$id = $_GET['id'] ?? null;
+
+if ($method === "DELETE") {
+    parse_str(file_get_contents("php://input"), $deleteVars);
+    if (!$id && isset($deleteVars['id'])) {
+        $id = $deleteVars['id'];
+    }
+}
 
 $response = [];
 
